@@ -80,3 +80,4 @@ Pipfile.lock
 /backend/uv.lock
 
 __pycache__
+bun.lock

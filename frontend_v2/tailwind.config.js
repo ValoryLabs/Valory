@@ -1,7 +1,12 @@
-const { fontFamily } = require("tailwindcss/defaultTheme");
+import { setupInspiraUI } from "@inspira-ui/plugins";
 
 /**@type {import('tailwindcss').Config} */
 module.exports = {
+  prefix: "",
+  content: [
+    "./index.html",
+    "./src/**/*.{vue,js,ts,jsx,tsx}",
+  ],
   theme: {
     extend: {
       container: {
@@ -17,14 +22,15 @@ module.exports = {
       },
       fontFamily: {
         sans: [
-          `Inter, ${fontFamily.sans.join(", ")}`,
+          `Inter`,
           {
             fontFeatureSettings: '"cv02","cv03","cv04","cv11"',
           },
         ],
-        mono: ["'Fira Code'", ...fontFamily.mono],
+        mono: ["'Fira Code'"],
       },
       borderRadius: {
+        xl: "calc(var(--radius) + 4px)",
         lg: "var(--radius)",
         md: "calc(var(--radius) - 2px)",
         sm: "calc(var(--radius) - 4px)",
@@ -135,5 +141,10 @@ module.exports = {
       },
     },
   },
-  plugins: [require("tailwindcss-animate"), require("@tailwindcss/forms")({ strategy: "class" })],
+  plugins: [
+    "tailwindcss-animate",
+    "@tailwindcss/forms",
+    setupInspiraUI,
+    ({ strategy: "class" })
+  ],
 };
