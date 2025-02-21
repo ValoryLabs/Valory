@@ -18,19 +18,19 @@ import Donation from '@/components/icons/Donation.vue'
           {{ $t('footer.left.description') }}
         </span>
         <div class="flex gap-4">
-          <Button @click="openLink('https://github.com/ValoryApp/Valory')" variant="ghost" class="p-2 h-fit cursor-pointer">
+          <Button aria-label="Github" @click="openLink('https://github.com/ValoryApp/Valory')" variant="ghost" class="p-2 h-fit cursor-pointer">
             <Github :size="20"/>
           </Button>
-          <Button @click="openLink('https://twitch.tv/MAGICXcmd')" variant="ghost" class="p-2 h-fit cursor-pointer">
+          <Button aria-label="Twitch" @click="openLink('https://twitch.tv/MAGICXcmd')" variant="ghost" class="p-2 h-fit cursor-pointer">
             <Twitch :size="20"/>
           </Button>
-          <Button @click="openLink('https://discord.gg/valory')" variant="ghost" class="p-2 h-fit cursor-pointer">
+          <Button aria-label="Discord" @click="openLink('https://discord.gg/valory')" variant="ghost" class="p-2 h-fit cursor-pointer">
             <Discord :size="20"/>
           </Button>
-          <Button @click="openLink('https://t.me/magicxcmd')" variant="ghost" class="p-2 h-fit cursor-pointer">
+          <Button aria-label="Telegram" @click="openLink('https://t.me/magicxcmd')" variant="ghost" class="p-2 h-fit cursor-pointer">
             <Telegram :size="20"/>
           </Button>
-          <Button @click="openLink('https://www.donationalerts.com/r/haxgun')" variant="ghost" class="p-2 h-fit cursor-pointer">
+          <Button aria-label="Donate" @click="openLink('https://www.donationalerts.com/r/haxgun')" variant="ghost" class="p-2 h-fit cursor-pointer">
             <Donation color="#FA4454" :size="20"/>
           </Button>
         </div>
