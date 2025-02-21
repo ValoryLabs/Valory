@@ -1,86 +1,80 @@
 <script setup lang="ts">
-import { Motion } from "motion-v";
+import { Motion } from 'motion-v'
 import { onMounted, onUnmounted, ref } from 'vue'
 
 interface Sparkle {
-  id: string;
-  x: string;
-  y: string;
-  color: string;
-  delay: number;
-  scale: number;
-  lifespan: number;
+  id: string
+  x: string
+  y: string
+  color: string
+  delay: number
+  scale: number
+  lifespan: number
 }
 
 interface Props {
-  sparklesCount?: number;
+  sparklesCount?: number
   colors?: {
-    first: string;
-    second: string;
-  };
-  class?: string;
+    first: string
+    second: string
+  }
+  class?: string
 }
 
 const props = withDefaults(defineProps<Props>(), {
   sparklesCount: 10,
-  colors: () => ({ first: "#9E7AFF", second: "#FE8BBB" }),
-});
+  colors: () => ({ first: '#9E7AFF', second: '#FE8BBB' }),
+})
 
-const sparkles = ref<Sparkle[]>([]);
+const sparkles = ref<Sparkle[]>([])
 
 // Generate a new sparkle with randomized properties
 function generateStar(): Sparkle {
-  const starX = `${Math.random() * 100}%`;
-  const starY = `${Math.random() * 100}%`;
-  const color = Math.random() > 0.5 ? props.colors.first : props.colors.second;
-  const delay = Math.random() * 6;
-  const scale = Math.random();
-  const lifespan = Math.random() * 50;
-  const id = `${starX}-${starY}-${Date.now()}`;
-  return { id, x: starX, y: starY, color, delay, scale, lifespan };
+  const starX = `${Math.random() * 100}%`
+  const starY = `${Math.random() * 100}%`
+  const color = Math.random() > 0.5 ? props.colors.first : props.colors.second
+  const delay = Math.random() * 6
+  const scale = Math.random()
+  const lifespan = Math.random() * 50
+  const id = `${starX}-${starY}-${Date.now()}`
+  return { id, x: starX, y: starY, color, delay, scale, lifespan }
 }
 
 // Initialize sparkles array with random stars
 function initializeStars() {
-  sparkles.value = Array.from({ length: props.sparklesCount }, generateStar);
+  sparkles.value = Array.from({ length: props.sparklesCount }, generateStar)
 }
 
 // Update sparkles - regenerate dead ones and update lifespans
 function updateStars() {
   sparkles.value = sparkles.value.map((star) => {
     if (star.lifespan <= 0) {
-      return generateStar();
+      return generateStar()
     } else {
-      return { ...star, lifespan: star.lifespan - 0.1 };
+      return { ...star, lifespan: star.lifespan - 0.1 }
     }
-  });
+  })
 }
 
-let interval: number;
+let interval: number
 
 // Start animation loop
 onMounted(() => {
-  initializeStars();
-  interval = window.setInterval(updateStars, 100);
-});
+  initializeStars()
+  interval = window.setInterval(updateStars, 100)
+})
 
 // Cleanup on unmount
 onUnmounted(() => {
   if (interval) {
-    clearInterval(interval);
+    clearInterval(interval)
   }
-});
+})
 </script>
 <template>
-  <div
-    class="text-6xl font-bold"
-    :class="props.class"
-  >
+  <div class="text-6xl font-bold" :class="props.class">
     <span class="relative inline-block">
-      <template
-        v-for="sparkle in sparkles"
-        :key="sparkle.id"
-      >
+      <template v-for="sparkle in sparkles" :key="sparkle.id">
         <Motion
           :initial="{ opacity: 0, scale: 0, rotate: 75 }"
           :animate="{
@@ -110,7 +104,7 @@ onUnmounted(() => {
           />
         </Motion>
       </template>
-      <slot/>
+      <slot />
     </span>
   </div>
 </template>

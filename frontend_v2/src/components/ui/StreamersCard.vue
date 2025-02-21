@@ -3,14 +3,14 @@ import { openLink } from '@/utils'
 import TwitchVerify from '@/components/icons/TwitchVerify.vue'
 
 interface Props {
-  img: string;
-  username: string;
-  followers: string;
-  live: boolean,
+  img: string
+  username: string
+  followers: string
+  live: boolean
   verified: boolean
 }
 
-defineProps<Props>();
+defineProps<Props>()
 </script>
 
 <template>
@@ -20,21 +20,17 @@ defineProps<Props>();
   >
     <div class="flex flex-row items-center gap-2">
       <div class="h-fit relative">
-        <img
-          :src="img"
-          class="rounded-full"
-          width="32"
-          height="32"
-          alt=""
-        />
+        <img :src="img" class="rounded-full" width="32" height="32" alt="" />
         <span v-if="live" class="bg-green-500 p-1 rounded-xl absolute top-0 right-0"></span>
       </div>
       <div class="flex flex-col">
         <span class="flex flex-row gap-1 items-center text-sm font-medium dark:text-white">
           @{{ username }}
-          <TwitchVerify v-if="verified" :size="18"/>
+          <TwitchVerify v-if="verified" :size="18" />
         </span>
-        <p class="text-xs font-medium dark:text-white/40">{{ followers }} {{ $t('streamers.card.followers') }}</p>
+        <p class="text-xs font-medium dark:text-white/40">
+          {{ followers }} {{ $t('streamers.card.followers') }}
+        </p>
       </div>
     </div>
   </figure>

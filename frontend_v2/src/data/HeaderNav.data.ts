@@ -1,5 +1,5 @@
 export interface HeaderNavData {
-  name: string,
+  name: string
   point: string
 }
 

@@ -1,12 +1,12 @@
 interface Child {
-  name: string;
-  url: string;
+  name: string
+  url: string
 }
 
 export interface FooterNavData {
-  id: number,
-  title: string;
-  items: Child[];
+  id: number
+  title: string
+  items: Child[]
 }
 
 export const FOOTER_NAV_PRODUCT_DATA: FooterNavData[] = [
@@ -26,7 +26,7 @@ export const FOOTER_NAV_PRODUCT_DATA: FooterNavData[] = [
         name: 'terms',
         url: '/terms',
       },
-    ]
+    ],
   },
   {
     id: 2,
@@ -40,6 +40,6 @@ export const FOOTER_NAV_PRODUCT_DATA: FooterNavData[] = [
         name: 'better',
         url: '/login',
       },
-    ]
-  }
+    ],
+  },
 ]

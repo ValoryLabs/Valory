@@ -1,20 +1,20 @@
 <script lang="ts" setup>
-import { cn } from '@/utils';
+import { cn } from '@/utils'
 
 const props = withDefaults(
   defineProps<{
-    class?: string;
-    reverse?: boolean;
-    pauseOnHover?: boolean;
-    vertical?: boolean;
-    repeat?: number;
+    class?: string
+    reverse?: boolean
+    pauseOnHover?: boolean
+    vertical?: boolean
+    repeat?: number
   }>(),
   {
     pauseOnHover: false,
     vertical: false,
     repeat: 4,
   },
-);
+)
 </script>
 
 <style scoped>

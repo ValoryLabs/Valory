@@ -1,20 +1,20 @@
 <script lang="ts" setup>
 import { useFetch } from '@vueuse/core'
-import { openLink } from "@/utils";
+import { openLink } from '@/utils'
 import { computed, ref } from 'vue'
 import { Button } from '@/components/ui/button'
 import Branch from '@/components/icons/Branch.vue'
 import Github from '@/components/icons/Socials/Github.vue'
 import Star from '@/components/icons/Star.vue'
-const repoUrl = ref("https://api.github.com/repos/ValoryApp/Valory");
-const contributorsUrl = ref("https://api.github.com/repos/ValoryApp/Valory/contributors");
+const repoUrl = ref('https://api.github.com/repos/ValoryApp/Valory')
+const contributorsUrl = ref('https://api.github.com/repos/ValoryApp/Valory/contributors')
 
-const { data: repoData } = useFetch(repoUrl).get().json();
-const { data: contributorsData } = useFetch(contributorsUrl).json();
+const { data: repoData } = useFetch(repoUrl).get().json()
+const { data: contributorsData } = useFetch(contributorsUrl).json()
 
 const forksCount = computed(() => repoData.value?.forks_count ?? 0)
 const starsCount = computed(() => repoData.value?.stargazers_count ?? 0)
-const contributorsCount = computed(() => contributorsData.value?.length ?? 0);
+const contributorsCount = computed(() => contributorsData.value?.length ?? 0)
 </script>
 
 <template>
@@ -27,7 +27,9 @@ const contributorsCount = computed(() => contributorsData.value?.length ?? 0);
       {{ $t('source.subtitle') }}
     </span>
     <div class="flex gap-2">
-      <Button @click="openLink('https://github.com/ValoryApp/Valory')" class="px-6">{{ $t('source.contribute') }} ({{ contributorsCount }})</Button>
+      <Button @click="openLink('https://github.com/ValoryApp/Valory')" class="px-6"
+        >{{ $t('source.contribute') }} ({{ contributorsCount }})</Button
+      >
       <Button
         @click="openLink('https://github.com/ValoryApp/Valory/forks')"
         class="gap-1 bg-[#19191A] px-3 text-[#F2F2F2] border border-white/10"

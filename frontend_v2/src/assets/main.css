@@ -7,19 +7,19 @@
     --duration: 60s;
     --gap: 1rem;
     --background: #000000;
-    --foreground: #F2F2F2;
+    --foreground: #f2f2f2;
     --card: 0 0% 100%;
     --card-foreground: 240 10% 3.9%;
     --popover: #000000;
-    --popover-foreground: #F2F2F2;
-    --primary: #F2F2F2;
+    --popover-foreground: #f2f2f2;
+    --primary: #f2f2f2;
     --primary-foreground: #000000;
     --secondary: 240 4.8% 95.9%;
     --secondary-foreground: 240 5.9% 10%;
     --muted: rgba(242, 242, 242, 0.1);
     --muted-foreground: 240 3.8% 46.1%;
-    --accent: #27272A;
-    --accent-foreground: #F2F2F2;
+    --accent: #27272a;
+    --accent-foreground: #f2f2f2;
     --destructive: 0 84.2% 60.2%;
     --destructive-foreground: 0 0% 98%;
     --border: rgba(242, 242, 242, 0.1);
@@ -78,21 +78,21 @@
   }
   body {
     @apply bg-background text-foreground;
-    font-feature-settings: "cv02", "cv03", "cv04", "cv11";
+    font-feature-settings: 'cv02', 'cv03', 'cv04', 'cv11';
   }
 }
 
 body {
-    font-family: 'Inter', sans-serif;
-    margin: 0;
-    padding: 0;
-    background-color: #000;
+  font-family: 'Inter', sans-serif;
+  margin: 0;
+  padding: 0;
+  background-color: #000;
 
-    color: #F2F2F2;
-    font-weight: 400;
+  color: #f2f2f2;
+  font-weight: 400;
 }
 
 svg {
-    margin-bottom: 0.125em;
-    vertical-align: middle;
+  margin-bottom: 0.125em;
+  vertical-align: middle;
 }

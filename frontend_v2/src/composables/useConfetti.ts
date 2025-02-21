@@ -3,6 +3,6 @@
  *
  * @see https://github.com/catdad/canvas-confetti
  */
-import useConfetti from "canvas-confetti";
+import useConfetti from 'canvas-confetti'
 
-export default useConfetti;
+export default useConfetti
