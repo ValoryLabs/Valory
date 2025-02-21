@@ -4,8 +4,8 @@ import { openLink } from "~/utils/utils";
 const repoUrl = ref("https://api.github.com/repos/ValoryApp/Valory");
 const contributorsUrl = ref("https://api.github.com/repos/ValoryApp/Valory/contributors");
 
-const { data: repoData } = useFetch(repoUrl).get().json();
-const { data: contributorsData } = useFetch(contributorsUrl).json();
+const { data: repoData } = await useFetch(repoUrl).get().json();
+const { data: contributorsData } = await useFetch(contributorsUrl).json();
 
 const forksCount = computed(() => repoData.value?.forks_count ?? 0)
 const starsCount = computed(() => repoData.value?.stargazers_count ?? 0)
