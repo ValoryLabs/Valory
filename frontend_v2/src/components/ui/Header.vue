@@ -3,6 +3,7 @@ import { NAV_DATA } from "@/data/HeaderNav.data";
 import Twitch from '@/components/icons/Socials/Twitch.vue'
 import Valory from '@/components/icons/Valory.vue'
 import { Button } from '@/components/ui/button'
+import LanguageSwitcher from "@/components/ui/LanguageSwitcher.vue";
 
 const moveTo = (containerId: string) => {
   const container = document.getElementById(containerId);
@@ -36,7 +37,7 @@ const moveTo = (containerId: string) => {
       <Valory :size="30"/>
     </div>
     <div class="right flex flex-row gap-2 items-center">
-<!--      <LanguageSwitcher/>-->
+      <LanguageSwitcher/>
       <Button class="text-sm" size="sm">
         {{ $t('nav.login') }}
         <Twitch :size="16" color="#000"/>
