@@ -44,7 +44,7 @@ import Donation from '@/components/icons/Donation.vue'
           <span class="font-bold text-base">
             {{ $t(`footer.right.sections.${nav.id === 1 ? 'first' : 'second'}.title`) }}
           </span>
-          <ul class="flex flex-col gap-2">
+          <div class="flex flex-col gap-2">
             <RouterLink
               v-for="item in nav.items"
               :key="item.name"
@@ -53,7 +53,7 @@ import Donation from '@/components/icons/Donation.vue'
             >
               {{ $t(`footer.right.sections.${nav.id === 1 ? 'first' : 'second'}.items.${item.name}`) }}
             </RouterLink>
-          </ul>
+          </div>
         </div>
       </div>
     </div>
