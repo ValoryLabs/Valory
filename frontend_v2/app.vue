@@ -1,8 +1,16 @@
 <script setup lang="ts">
-
-const metaImg = 'images/meta.webp'
-const metaTitle = 'Stream Overlays - VALORY'
-const metaDescription = 'Elevate your Valorant streaming experience by using VALORY. Keep your viewers engaged and informed, and showcase your progress in the game while making your stream more captivating and memorable!'
+const metaImg = '/images/meta.webp'
+const metaTitle = 'Stream Overlay for Valorant - VALORY'
+const metaDescription =
+  'Enhance your Valorant stream with VALORY overlays. ' +
+  'Engage viewers, showcase progress, and make your stream unforgettable!'
+const metaKeywords =
+  'valorant, valorant overlay, stream overlay, OBS overlay, valorant stream, ' +
+  'valorant streaming, valorant tracker, valorant rank tracker, ' +
+  'Valorant scoreboard overlay, Valorant stream graphics, valorant stream assets, ' +
+  'valorant stream design, valorant stream templates, valorant stream enhancements, ' +
+  'valorant stream tools, valorant stream customization, valorant stream widgets, ' +
+  'valorant stream plugins, valorant stream resources, valorant stream overlays, valory'
 
 useSeoMeta({
   title: metaTitle,
@@ -15,20 +23,7 @@ useSeoMeta({
   twitterDescription: metaDescription,
   twitterImage: metaImg,
   author: 'MAGICX, misha@valory.su',
-  keywords:
-    'valory, valory tracker, valory obs, valory obs tracker, valory overlay, ' +
-    'obs tracker, obs overlay, valory valorant, valorant, valorant obs, ' +
-    'valorant tracker, valorant overlay, valory obs overlay,' +
-    ' valory valorant overlay, valory valorant obs, valorant tracker, ' +
-    'valorant tracker, valorant stream overlay, valorant player tracker, ' +
-    'custom display for valorant, valorant leaderboard overlay, ' +
-    'radiant rank tracker, winrate tracker for streamers, ' +
-    'valorant win/lose display, custom valorant leaderboard, ' +
-    'valorant obs overlay, radiant players tracker, valorant stream ' +
-    'custom display, streamer winrate overlay, win/lose tracker for valorant, ' +
-    'valorant rank display, valorant custom rank overlay, valorant stream ' +
-    'leaderboard, radiant rank winrate, streamer valorant overlay, ' +
-    'winrate display for valorant players',
+  keywords: metaKeywords
 });
 </script>
 

@@ -24,7 +24,7 @@
           {{ $t('features.blocks.first.description') }}
         </span>
       </div>
-      <img src="/images/features.webp" alt="Features" class="h-auto">
+      <NuxtImg src="/images/features.webp" alt="Features" class="h-auto"/>
     </div>
     <div
       class="flex flex-col px-12 pt-12 rounded-2xl border border-white/10"
@@ -37,7 +37,7 @@
           {{ $t('features.blocks.second.description') }}
         </span>
       </div>
-      <img src="/images/configuration.webp" alt="configuration">
+      <NuxtImg src="/images/configuration.webp" alt="configuration"/>
     </div>
     <div
       class="flex flex-col px-12 pt-12 pb-48 rounded-2xl border border-white/10"
