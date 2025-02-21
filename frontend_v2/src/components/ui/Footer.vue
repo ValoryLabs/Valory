@@ -61,7 +61,7 @@ import Donation from '@/components/icons/Donation.vue'
         </div>
       </div>
       <div class="flex flex-row gap-32 justify-end">
-        <div v-for="nav in FOOTER_NAV_PRODUCT_DATA" :key="nav.title" class="flex flex-col gap-2">
+        <div v-for="nav in FOOTER_NAV_PRODUCT_DATA" v-memo="[nav]" :key="nav.title" class="flex flex-col gap-2">
           <span class="font-bold text-base">
             {{ $t(`footer.right.sections.${nav.id === 1 ? 'first' : 'second'}.title`) }}
           </span>

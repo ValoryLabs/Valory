@@ -57,6 +57,7 @@ const props = withDefaults(
     "
   >
     <div
+      v-memo="[index]"
       v-for="index in repeat"
       :key="index"
       :class="

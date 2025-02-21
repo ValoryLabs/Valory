@@ -33,12 +33,14 @@ export default defineConfig({
   },
   build: {
     target: 'esnext',
-    sourcemap: true,
+    sourcemap: false,
   },
   rollupOptions: {
     output: {
       manualChunks: {
-        vendor: ['vue', 'vue-router', 'vue-i18n'],
+        vue: ['vue'],
+        'vue-router': ['vue-router'],
+        pinia: ['pinia'],
       },
     },
   },
