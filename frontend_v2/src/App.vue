@@ -1,6 +1,7 @@
 <script setup lang="ts">
-import { useSeoMeta } from '@unhead/vue'
+import { useHead, useSeoMeta } from "@unhead/vue";
 
+const titleMain = 'VALORY'
 const metaImg = 'meta.webp'
 const metaTitle = 'Stream Overlay for Valorant - VALORY'
 const metaDescription =
@@ -14,9 +15,23 @@ const metaKeywords =
   'valorant stream tools, valorant stream customization, valorant stream widgets, ' +
   'valorant stream plugins, valorant stream resources, valorant stream overlays, valory'
 
+useHead({
+  title: metaTitle,
+  titleTemplate: (title) => title === metaTitle ? title : `${title} - ${titleMain}`,
+  meta: [
+    { name: 'viewport', content: 'width=device-width, initial-scale=1' },
+  ],
+  link: [
+		{ rel: 'dns-prefetch', href: 'https://static-cdn.jtvnw.net' },
+		{ rel: 'dns-prefetch', href: 'https://api.github.com/repos/ValoryApp/Valory' },
+		{ rel: 'dns-prefetch', href: 'https://api.github.com/repos/ValoryApp/Valory/contributors' },
+	],
+})
+
 useSeoMeta({
   title: metaTitle,
   description: metaDescription,
+  viewport: 'width=device-width, initial-scale=1',
   ogTitle: metaTitle,
   ogDescription: metaDescription,
   ogImage: metaImg,
