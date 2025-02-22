@@ -2,7 +2,7 @@
 import { defineAsyncComponent } from 'vue'
 import Header from '@/components/ui/Header.vue'
 import Main from '@/components/HomePage/Main.vue'
-import { hidden } from "@/utils";
+import { hidden } from '@/utils'
 
 const Features = defineAsyncComponent(() => import('@/components/HomePage/Features.vue'))
 const Streamers = defineAsyncComponent(() => import('@/components/HomePage/Streamers.vue'))
@@ -16,7 +16,7 @@ const Footer = defineAsyncComponent(() => import('@/components/ui/Footer.vue'))
     <div class="flex flex-col gap-16">
       <Main />
       <Features />
-      <Streamers v-if="!hidden"/>
+      <Streamers v-if="!hidden" />
       <OpenSource />
     </div>
   </div>

@@ -3,17 +3,17 @@ import StreamersMarquee from '@/components/HomePage/StreamersMarquee.vue'
 </script>
 
 <template>
-  <div id="streamers" class="container m-auto flex flex-col gap-10 items-center">
-    <div class="flex flex-col gap-6 items-center">
+  <div id="streamers" class="container m-auto flex flex-col items-center gap-10">
+    <div class="flex flex-col items-center gap-6">
       <span
-        class="font-bold uppercase text-xs bg-gradient-to-r from-[#FF930F] to-[#FFF95B] text-transparent bg-clip-text inline-block"
+        class="inline-block bg-gradient-to-r from-[#FF930F] to-[#FFF95B] bg-clip-text text-xs font-bold uppercase text-transparent"
       >
         {{ $t('streamers.category') }}
       </span>
-      <span class="uppercase text-2xl font-bold text-center">
+      <span class="text-center text-2xl font-bold uppercase">
         {{ $t('streamers.title') }}
       </span>
-      <span class="text-center text-[#CECECE] text-base font-normal whitespace-pre-line">
+      <span class="whitespace-pre-line text-center text-base font-normal text-[#CECECE]">
         {{ $t('streamers.subtitle') }}
       </span>
       <div class="container">

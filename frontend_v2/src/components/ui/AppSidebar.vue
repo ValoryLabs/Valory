@@ -1,5 +1,5 @@
 <script setup lang="ts">
-import { SidebarProps, SidebarTrigger } from "@/components/ui/sidebar";
+import { SidebarProps, SidebarTrigger } from '@/components/ui/sidebar'
 
 import NavMain from '@/components/ui/NavMain.vue'
 import NavUser from '@/components/ui/NavUser.vue'
@@ -11,9 +11,9 @@ import {
   SidebarRail,
 } from '@/components/ui/sidebar'
 
-import { NAV_DATA } from "@/data/dashboard/HeaderNav.data";
-import Valory from "@/components/icons/Valory.vue";
-import NavExtra from "@/components/ui/NavExtra.vue";
+import { NAV_DATA } from '@/data/dashboard/HeaderNav.data'
+import Valory from '@/components/icons/Valory.vue'
+import NavExtra from '@/components/ui/NavExtra.vue'
 
 const props = withDefaults(defineProps<SidebarProps>(), {
   collapsible: 'icon',
@@ -24,16 +24,21 @@ const data = NAV_DATA
 
 <template>
   <Sidebar v-bind="props">
-    <SidebarHeader class="p-4 flex flex-row justify-between group-data-[collapsible=icon]:justify-center">
-      <span @click="$router.push('/')" class="cursor-pointer flex group-data-[collapsible=icon]:hidden items-center gap-3 w-fit">
-        <Valory/>
+    <SidebarHeader
+      class="flex flex-row justify-between p-4 group-data-[collapsible=icon]:justify-center"
+    >
+      <span
+        @click="$router.push('/')"
+        class="flex w-fit cursor-pointer items-center gap-3 group-data-[collapsible=icon]:hidden"
+      >
+        <Valory />
         <span class="font-valory group-data-[collapsible=icon]:hidden">VALORY</span>
       </span>
-      <SidebarTrigger/>
+      <SidebarTrigger />
     </SidebarHeader>
     <SidebarContent class="relative">
       <NavMain title="Menu" :items="data.navMain" />
-      <NavExtra class="absolute bottom-0" :items="data.navExtra"/>
+      <NavExtra class="absolute bottom-0" :items="data.navExtra" />
     </SidebarContent>
     <SidebarFooter>
       <NavUser :user="data.user" />

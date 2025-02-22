@@ -18,12 +18,12 @@ const contributorsCount = computed(() => contributorsData.value?.length ?? 0)
 </script>
 
 <template>
-  <section id="source" class="flex py-16 flex-col items-center justify-center gap-9">
+  <section id="source" class="flex flex-col items-center justify-center gap-9 py-16">
     <Github :size="60" class="drop-shadow-[0_0_20px_rgba(255,255,255,0.4)]" />
-    <span class="text-6xl font-extrabold text-center drop-shadow-[0_0_20px_rgba(255,255,255,0.4)]">
+    <span class="text-center text-6xl font-extrabold drop-shadow-[0_0_20px_rgba(255,255,255,0.4)]">
       {{ $t('source.title') }}
     </span>
-    <span class="text-center text-lg whitespace-pre-line">
+    <span class="whitespace-pre-line text-center text-lg">
       {{ $t('source.subtitle') }}
     </span>
     <div class="flex gap-2">
@@ -32,14 +32,14 @@ const contributorsCount = computed(() => contributorsData.value?.length ?? 0)
       >
       <Button
         @click="openLink('https://github.com/ValoryApp/Valory/forks')"
-        class="gap-1 bg-[#19191A] px-3 text-[#F2F2F2] border border-white/10"
+        class="gap-1 border border-white/10 bg-[#19191A] px-3 text-[#F2F2F2]"
       >
         <Branch :size="22" />
         {{ forksCount }}
       </Button>
       <Button
         @click="openLink('https://github.com/ValoryApp/Valory/stargazers')"
-        class="gap-1 bg-[#19191A] px-3 text-[#F2F2F2] border border-white/10"
+        class="gap-1 border border-white/10 bg-[#19191A] px-3 text-[#F2F2F2]"
       >
         <Star color="#E3B341" :size="22" />
         {{ starsCount }}

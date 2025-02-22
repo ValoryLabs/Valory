@@ -9,7 +9,7 @@ import {
 import { type LucideIcon } from 'lucide-vue-next'
 
 defineProps<{
-  title?: string,
+  title?: string
   items: {
     title: string
     url: string
@@ -21,10 +21,7 @@ defineProps<{
 <template>
   <SidebarGroup>
     <SidebarGroupLabel v-if="title" class="uppercase">{{ title }}</SidebarGroupLabel>
-    <SidebarMenu
-      v-for="item in items"
-      :key="item.title"
-    >
+    <SidebarMenu v-for="item in items" :key="item.title">
       <SidebarMenuItem>
         <SidebarMenuButton :tooltip="item.title" as-child>
           <a href="/">

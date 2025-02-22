@@ -1,5 +1,5 @@
 <script setup lang="ts">
-import { useHead, useSeoMeta } from "@unhead/vue";
+import { useHead, useSeoMeta } from '@unhead/vue'
 
 const titleMain = 'VALORY'
 const metaImg = 'meta.webp'
@@ -17,10 +17,8 @@ const metaKeywords =
 
 useHead({
   title: metaTitle,
-  titleTemplate: (title) => title === metaTitle ? title : `${title} - ${titleMain}`,
-  meta: [
-    { name: 'viewport', content: 'width=device-width, initial-scale=1' },
-  ],
+  titleTemplate: (title) => (title === metaTitle ? title : `${title} - ${titleMain}`),
+  meta: [{ name: 'viewport', content: 'width=device-width, initial-scale=1' }],
 })
 
 useSeoMeta({
