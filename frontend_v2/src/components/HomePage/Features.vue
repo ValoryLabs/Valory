@@ -42,7 +42,7 @@ import { hidden } from "@/utils.js";
             {{ $t('features.blocks.first.description') }}
           </span>
         </div>
-        <img v-if="!hidden" src="/images/features.webp" alt="Features" class="h-auto" />
+        <img v-if="!hidden" src="/images/features.webp" alt="Features" class="h-auto"  fetchpriority="low" />
       </div>
       <div
         class="flex flex-col px-12 pt-12 rounded-2xl border border-white/10"
@@ -56,7 +56,7 @@ import { hidden } from "@/utils.js";
             {{ $t('features.blocks.second.description') }}
           </span>
         </div>
-        <img v-if="!hidden" src="/images/configuration.webp" alt="configuration" />
+        <img v-if="!hidden" src="/images/configuration.webp" alt="configuration" fetchpriority="low" />
       </div>
       <div
         class="flex flex-col px-12 pt-12 rounded-2xl border border-white/10"
