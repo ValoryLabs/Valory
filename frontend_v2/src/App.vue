@@ -21,11 +21,6 @@ useHead({
   meta: [
     { name: 'viewport', content: 'width=device-width, initial-scale=1' },
   ],
-  link: [
-		{ rel: 'dns-prefetch', href: 'https://static-cdn.jtvnw.net' },
-		{ rel: 'dns-prefetch', href: 'https://api.github.com/repos/ValoryApp/Valory' },
-		{ rel: 'dns-prefetch', href: 'https://api.github.com/repos/ValoryApp/Valory/contributors' },
-	],
 })
 
 useSeoMeta({
