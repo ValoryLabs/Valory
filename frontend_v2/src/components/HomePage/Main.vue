@@ -5,6 +5,7 @@ import Discord from '@/components/icons/Socials/Discord.vue'
 import Start from '@/components/icons/Start.vue'
 import Stars from '@/components/icons/Stars.vue'
 import { Button } from '@/components/ui/button'
+import { hidden } from "@/utils";
 
 function randomInRange(min: number, max: number) {
   return Math.random() * (max - min) + min
@@ -37,7 +38,10 @@ const triggerConfetti = () => {
 
 <template>
   <section class="relative h-dvh flex justify-between items-center mt-[-5rem]">
-    <div class="flex flex-col gap-9 items-start justify-center">
+    <div
+      class="flex flex-col gap-9 items-start justify-center"
+      :class="[hidden ? 'w-full' : '']"
+    >
       <Sparkles :colors="{ first: '#ffffff', second: '#ffffff' }" :sparkles-count="5">
         <span
           @click="triggerConfetti()"
@@ -51,21 +55,29 @@ const triggerConfetti = () => {
       <span class="text-5xl font-black uppercase whitespace-pre-line">
         {{ $t('main.title') }}
       </span>
-      <span class="text-base text-[#CECECE] whitespace-pre-line">
+      <span
+        class="text-[#CECECE] whitespace-pre-line"
+        :class="[hidden? 'text-lg': 'text-base']"
+      >
         {{ $t('main.subtitle') }}
       </span>
-      <span class="flex gap-3">
-        <Button>
+      <span class="flex flex-col lg:flex-row gap-3 w-full">
+        <Button
+          :class="[hidden? 'text-lg h-12': 'text-base']"
+        >
           {{ $t('main.buttons.first') }}
           <Start :size="16" color="#000" />
         </Button>
-        <Button variant="ghost">
+        <Button variant="ghost"
+          :class="[hidden? 'text-lg h-12': 'text-base']"
+        >
           {{ $t('main.buttons.second') }}
           <Stars :size="16" />
         </Button>
       </span>
     </div>
     <div
+      v-if="!hidden"
       class="before:content-[''] before:absolute before:w-[400px] before:h-[400px] before:right-[-30px] before:bottom-[18rem] before:rounded-full before:pointer-events-none before:bg-[#A80026]/40 before:blur-[200px] before:-z-10"
     >
       <img src="/images/ValoryLogo3D.webp" height="321" alt="Valory 3D" />

@@ -4,6 +4,7 @@ import Twitch from '@/components/icons/Socials/Twitch.vue'
 import Valory from '@/components/icons/Valory.vue'
 import { Button } from '@/components/ui/button'
 import LanguageSwitcher from '@/components/ui/LanguageSwitcher.vue'
+import { hidden } from "@/utils";
 
 const moveTo = (containerId: string) => {
   const container = document.getElementById(containerId)
@@ -22,7 +23,7 @@ const moveTo = (containerId: string) => {
   <header class="text-sm sticky top-0 bg-black/30 h-20 backdrop-blur-sm z-10 flex justify-center">
     <div class="container flex m-auto justify-between items-center">
       <div class="left">
-        <ul class="flex justify-between items-center gap-6">
+        <ul v-if="!hidden" class="flex justify-between items-center gap-6">
           <li
             v-for="nav in NAV_DATA"
             :key="nav.name"
@@ -33,7 +34,10 @@ const moveTo = (containerId: string) => {
           </li>
         </ul>
       </div>
-      <div class="logo absolute left-1/2">
+      <div
+        class="logo absolute"
+        :class="[hidden ? '' : 'left-1/2']"
+      >
         <Valory :size="30" />
       </div>
       <div class="right flex flex-row gap-2 items-center">

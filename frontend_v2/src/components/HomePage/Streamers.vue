@@ -1,5 +1,5 @@
 <script setup lang="ts">
-import StreamersMarquee from '@/components/MainPage/StreamersMarquee.vue'
+import StreamersMarquee from '@/components/HomePage/StreamersMarquee.vue'
 </script>
 
 <template>

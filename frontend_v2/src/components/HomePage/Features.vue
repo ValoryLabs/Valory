@@ -1,3 +1,7 @@
+<script setup lang="ts">
+import { hidden } from "@/utils.js";
+</script>
+
 <template>
   <section id="features" class="container flex flex-col gap-10 justify-center items-center">
     <div class="flex flex-col gap-6 items-center">
@@ -14,7 +18,8 @@
       </span>
     </div>
     <div
-      class="grid grid-cols-[repeat(2,1fr)] grid-rows-[repeat(2,1fr)] gap-4 justify-items-stretch"
+      class="gap-4 justify-items-stretch"
+      :class="[hidden ? 'flex flex-col' : 'grid grid-cols-[repeat(2,1fr)] grid-rows-[repeat(2,1fr)]']"
     >
       <div
         class="row-span-1 col-span-2 w-auto flex flex-row gap-4 self-stretch content-stretch rounded-2xl border border-white/10"
@@ -37,9 +42,12 @@
             {{ $t('features.blocks.first.description') }}
           </span>
         </div>
-        <img src="/images/features.webp" alt="Features" class="h-auto" />
+        <img v-if="!hidden" src="/images/features.webp" alt="Features" class="h-auto" />
       </div>
-      <div class="flex flex-col px-12 pt-12 rounded-2xl border border-white/10">
+      <div
+        class="flex flex-col px-12 pt-12 rounded-2xl border border-white/10"
+        :class="[hidden ? 'pb-12' : '']"
+      >
         <div class="flex flex-col gap-5 pr-5">
           <span class="text-xl font-medium">
             {{ $t('features.blocks.second.title') }}
@@ -48,9 +56,12 @@
             {{ $t('features.blocks.second.description') }}
           </span>
         </div>
-        <img src="/images/configuration.webp" alt="configuration" />
+        <img v-if="!hidden" src="/images/configuration.webp" alt="configuration" />
       </div>
-      <div class="flex flex-col px-12 pt-12 pb-48 rounded-2xl border border-white/10">
+      <div
+        class="flex flex-col px-12 pt-12 rounded-2xl border border-white/10"
+        :class="[hidden ? 'pb-12' : 'pb-48']"
+      >
         <div class="flex flex-col gap-5 pr-5">
           <span class="text-xl font-medium">
             {{ $t('features.blocks.third.title') }}

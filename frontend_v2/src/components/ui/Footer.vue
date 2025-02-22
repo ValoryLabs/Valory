@@ -1,6 +1,6 @@
 <script setup lang="ts">
 import { FOOTER_NAV_PRODUCT_DATA } from '@/data/FooterNav.data'
-import { openLink } from '@/utils'
+import { hidden, openLink } from "@/utils";
 import { Button } from '@/components/ui/button'
 import Github from '@/components/icons/Socials/Github.vue'
 import Valory from '@/components/icons/Valory.vue'
@@ -11,7 +11,7 @@ import Donation from '@/components/icons/Donation.vue'
 </script>
 <template>
   <footer class="container m-auto flex flex-col gap-10 mt-16">
-    <div class="flex justify-between">
+    <div class="flex justify-between gap-8">
       <div class="flex flex-col gap-8">
         <Valory :size="25" />
         <span class="font-normal whitespace-pre-line">
@@ -60,7 +60,10 @@ import Donation from '@/components/icons/Donation.vue'
           </Button>
         </div>
       </div>
-      <div class="flex flex-row gap-32 justify-end">
+      <div
+        class="flex justify-end"
+        :class="[hidden ? 'flex-col gap-8' : 'flex-row gap-32']"
+      >
         <div
           v-for="nav in FOOTER_NAV_PRODUCT_DATA"
           v-memo="[nav]"
