@@ -28,8 +28,3 @@ const props = withDefaults(defineProps<Props>(), {
   </svg>
 </template>
 
-<style scoped>
-svg {
-  margin-bottom: 0;
-}
-</style>

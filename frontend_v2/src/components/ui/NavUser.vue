@@ -17,6 +17,8 @@ import {
   useSidebar,
 } from '@/components/ui/sidebar'
 import { BadgeCheck, Bell, ChevronsUpDown, CreditCard, LogOut, Sparkles } from 'lucide-vue-next'
+import Language from "@/components/icons/Language.vue";
+import Settings from "@/components/icons/General/Settings.vue";
 
 const props = defineProps<{
   user: {
@@ -50,7 +52,7 @@ const { isMobile } = useSidebar()
         </DropdownMenuTrigger>
         <DropdownMenuContent
           class="w-[--reka-dropdown-menu-trigger-width] min-w-56 rounded-lg"
-          :side="isMobile ? 'bottom' : 'right'"
+          :side="isMobile ? 'bottom' : 'top'"
           align="end"
           :side-offset="4"
         >
@@ -62,30 +64,18 @@ const { isMobile } = useSidebar()
               </Avatar>
               <div class="grid flex-1 text-left text-sm leading-tight">
                 <span class="truncate font-semibold">{{ user.name }}</span>
-                <span class="truncate text-xs">{{ user.email }}</span>
               </div>
             </div>
           </DropdownMenuLabel>
           <DropdownMenuSeparator />
           <DropdownMenuGroup>
             <DropdownMenuItem>
-              <Sparkles />
-              Upgrade to Pro
-            </DropdownMenuItem>
-          </DropdownMenuGroup>
-          <DropdownMenuSeparator />
-          <DropdownMenuGroup>
-            <DropdownMenuItem>
-              <BadgeCheck />
-              Account
+              <Settings/>
+              Settings
             </DropdownMenuItem>
             <DropdownMenuItem>
-              <CreditCard />
-              Billing
-            </DropdownMenuItem>
-            <DropdownMenuItem>
-              <Bell />
-              Notifications
+              <Language/>
+              Language
             </DropdownMenuItem>
           </DropdownMenuGroup>
           <DropdownMenuSeparator />

@@ -1,24 +1,26 @@
 import Home from '@/components/icons/Home.vue'
-
-import {
-  BookOpen,
-  Bot,
-  CircleHelp,
-  type LucideIcon,
-  Settings2,
-  SquareTerminal,
-} from 'lucide-vue-next'
-import { type DefineComponent } from 'vue'
+import LayersTwo from "@/components/icons/Layout/LayersTwo.vue";
+import Valorant from "@/components/icons/Socials/Valorant.vue";
+import Spotify from "@/components/icons/Socials/Spotify.vue";
+import Link from "@/components/icons/General/Link.vue";
+import HelpCircle from "@/components/icons/General/HelpCircle.vue";
+import BookClosed from "@/components/icons/Education/BookClosed.vue";
+import Twitch from "@/components/icons/Socials/Twitch.vue";
+import Github from "@/components/icons/Socials/Github.vue";
+import Discord from "@/components/icons/Socials/Discord.vue";
+import Telegram from "@/components/icons/Socials/Telegram.vue";
+import Donation from "@/components/icons/Donation.vue";
 
 interface NavItem {
   title: string
   url: string
+  icon?: any
 }
 
 interface NavMainItem {
   title: string
   url: string
-  icon: LucideIcon | DefineComponent
+  icon: any
   isActive?: boolean
   items?: NavItem[]
 }
@@ -26,7 +28,7 @@ interface NavMainItem {
 interface NavExtra {
   title: string
   url: string
-  icon: LucideIcon
+  icon: any
 }
 
 interface User {
@@ -34,10 +36,16 @@ interface User {
   avatar: string
 }
 
+interface Button {
+  icon: any
+  url: string
+}
+
 export interface NavData {
   user: User
   navMain: NavMainItem[]
   navExtra: NavExtra[]
+  buttons: Button[]
 }
 
 export const NAV_DATA: NavData = {
@@ -55,40 +63,64 @@ export const NAV_DATA: NavData = {
     {
       title: 'Overlays',
       url: '#',
-      icon: SquareTerminal,
+      icon: LayersTwo,
       isActive: true,
       items: [
         {
           title: 'Valorant',
           url: '#',
+          icon: Valorant
         },
         {
           title: 'Spotify',
           url: '#',
+          icon: Spotify
         },
       ],
     },
     {
       title: 'Bot',
       url: '#',
-      icon: Bot,
+      icon: Twitch,
     },
   ],
   navExtra: [
     {
       title: 'Documentation',
       url: '#',
-      icon: BookOpen,
+      icon: BookClosed,
     },
     {
       title: 'Integrations',
       url: '#',
-      icon: Settings2,
+      icon: Link,
     },
     {
       title: 'Help',
       url: '#',
-      icon: CircleHelp,
+      icon: HelpCircle,
     },
   ],
+  buttons: [
+    {
+      icon: Github,
+      url: 'https://github.com/ValoryApp/Valory',
+    },
+    {
+      icon: Twitch,
+      url: 'https://twitch.tv/MAGICXcmd',
+    },
+    {
+      icon: Discord,
+      url: 'https://discord.gg/valory',
+    },
+    {
+      icon: Telegram,
+      url: 'https://t.me/magicxcmd',
+    },
+    {
+      icon: Donation,
+      url: 'https://www.donationalerts.com/r/haxgun',
+    }
+  ]
 }

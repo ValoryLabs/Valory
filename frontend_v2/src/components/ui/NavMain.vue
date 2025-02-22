@@ -53,6 +53,7 @@ defineProps<{
               <SidebarMenuSubItem v-for="subItem in item.items" :key="subItem.title">
                 <SidebarMenuSubButton as-child>
                   <a :href="subItem.url">
+                    <component :is="subItem.icon" v-if="subItem.icon" />
                     <span>{{ subItem.title }}</span>
                   </a>
                 </SidebarMenuSubButton>

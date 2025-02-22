@@ -6,14 +6,19 @@ import {
   SidebarMenuButton,
   SidebarMenuItem,
 } from '@/components/ui/sidebar'
-import { type LucideIcon } from 'lucide-vue-next'
+import { Button } from "@/components/ui/button";
+import { openLink } from "@/utils";
 
 defineProps<{
   title?: string
+  buttons?: {
+    icon: any
+    url: string
+  }[]
   items: {
     title: string
     url: string
-    icon?: LucideIcon
+    icon?: any
   }[]
 }>()
 </script>
@@ -31,5 +36,10 @@ defineProps<{
         </SidebarMenuButton>
       </SidebarMenuItem>
     </SidebarMenu>
+    <div v-if="buttons" class="flex flex-row gap-3 max-w-[16rem] justify-between m-2 mb-0">
+      <Button class="p-2 h-8 bg-white/5" variant="ghost" v-for="button in buttons" :key="button.url" @click="openLink(button.url)">
+        <component :size="16" :is="button.icon" v-if="button.icon" />
+      </Button>
+    </div>
   </SidebarGroup>
 </template>

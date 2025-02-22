@@ -1,5 +1,5 @@
 <script setup lang="ts">
-import { SidebarProps, SidebarTrigger } from '@/components/ui/sidebar'
+import { type SidebarProps, SidebarTrigger } from '@/components/ui/sidebar'
 
 import NavMain from '@/components/ui/NavMain.vue'
 import NavUser from '@/components/ui/NavUser.vue'
@@ -36,9 +36,9 @@ const data = NAV_DATA
       </span>
       <SidebarTrigger />
     </SidebarHeader>
-    <SidebarContent class="relative">
+    <SidebarContent class="relative text-lg">
       <NavMain title="Menu" :items="data.navMain" />
-      <NavExtra class="absolute bottom-0" :items="data.navExtra" />
+      <NavExtra class="absolute bottom-0" :items="data.navExtra" :buttons="data.buttons"/>
     </SidebarContent>
     <SidebarFooter>
       <NavUser :user="data.user" />

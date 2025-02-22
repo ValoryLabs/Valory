@@ -26,9 +26,3 @@ const props = withDefaults(defineProps<Props>(), {
     <path d="M26.5727 9.42859H23.1442V19.7143H26.5727V9.42859Z" :fill="props.color" />
   </svg>
 </template>
-
-<style scoped>
-svg {
-  margin-bottom: 0;
-}
-</style>
