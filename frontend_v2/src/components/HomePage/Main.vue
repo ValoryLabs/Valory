@@ -69,13 +69,13 @@ const triggerConfetti = () => {
       </span>
       <span class="flex flex-col lg:flex-row gap-3 w-full">
         <Button
-          :class="[hidden? 'text-lg h-12': 'text-base']"
+          :class="[hidden? 'text-lg h-12': 'text-sm']"
         >
           {{ $t('main.buttons.first') }}
           <Start :size="16" color="#000" />
         </Button>
         <Button variant="ghost"
-          :class="[hidden? 'text-lg h-12': 'text-base']"
+          :class="[hidden? 'text-lg h-12': 'text-sm']"
         >
           {{ $t('main.buttons.second') }}
           <Stars :size="16" />
