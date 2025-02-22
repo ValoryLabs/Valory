@@ -37,7 +37,7 @@ const data = NAV_DATA
       <SidebarTrigger />
     </SidebarHeader>
     <SidebarContent class="relative text-lg">
-      <NavMain title="Menu" :items="data.navMain" />
+      <NavMain :items="data.navMain" />
       <NavExtra class="absolute bottom-0" :items="data.navExtra" :buttons="data.buttons"/>
     </SidebarContent>
     <SidebarFooter>
