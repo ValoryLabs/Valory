@@ -5,6 +5,7 @@ import Valory from '@/components/icons/Valory.vue'
 import { Button } from '@/components/ui/button'
 import LanguageSwitcher from '@/components/ui/LanguageSwitcher.vue'
 import { hidden } from "@/utils";
+import router from "@/router";
 
 const moveTo = (containerId: string) => {
   const container = document.getElementById(containerId)
@@ -42,7 +43,7 @@ const moveTo = (containerId: string) => {
       </div>
       <div class="right flex flex-row gap-2 items-center">
         <LanguageSwitcher />
-        <Button class="text-sm" size="sm">
+        <Button class="text-sm" size="sm" @click="router.push('/dashboard')">
           {{ $t('nav.login') }}
           <Twitch :size="16" color="#000" />
         </Button>

@@ -39,10 +39,13 @@ const triggerConfetti = () => {
 <template>
   <section class="relative h-dvh flex justify-between items-center mt-[-5rem]">
     <div
-      class="flex flex-col gap-9 items-start justify-center"
+      class="relative flex flex-col gap-9 items-start justify-center"
       :class="[hidden ? 'w-full' : '']"
     >
-      <Sparkles :colors="{ first: '#ffffff', second: '#ffffff' }" :sparkles-count="5">
+      <Sparkles
+        :colors="{ first: '#ffffff', second: '#ffffff' }" :sparkles-count="5"
+        :class="[hidden ? 'relative m-auto' : '']"
+      >
         <span
           @click="triggerConfetti()"
           class="flex gap-2 items-center py-1 pl-2 pr-3 bg-[#7289DA]/25 rounded-xl border border-white/10 text-xs font-semibold cursor-pointer hover:bg-[#7289DA]/40 transition duration-150 drop-shadow-[0_0_20px_rgba(0,59,255,1)]"
@@ -52,12 +55,15 @@ const triggerConfetti = () => {
           {{ $t('main.discord') }}
         </span>
       </Sparkles>
-      <span class="text-5xl font-black uppercase whitespace-pre-line">
+      <span
+        class="text-5xl font-black uppercase whitespace-pre-line"
+        :class="[hidden? 'text-center w-full': '']"
+      >
         {{ $t('main.title') }}
       </span>
       <span
         class="text-[#CECECE] whitespace-pre-line"
-        :class="[hidden? 'text-lg': 'text-base']"
+        :class="[hidden? 'text-lg text-center w-full': 'text-base']"
       >
         {{ $t('main.subtitle') }}
       </span>
