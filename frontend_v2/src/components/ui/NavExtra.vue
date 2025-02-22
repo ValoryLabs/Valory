@@ -24,7 +24,7 @@ defineProps<{
 </script>
 
 <template>
-  <SidebarGroup>
+  <SidebarGroup class="overflow-x-hidden">
     <SidebarGroupLabel v-if="title" class="uppercase">{{ title }}</SidebarGroupLabel>
     <SidebarMenu v-for="item in items" :key="item.title">
       <SidebarMenuItem>
@@ -36,8 +36,14 @@ defineProps<{
         </SidebarMenuButton>
       </SidebarMenuItem>
     </SidebarMenu>
-    <div v-if="buttons" class="flex flex-row gap-3 max-w-[16rem] justify-between m-2 mb-0">
-      <Button class="p-2 h-8 bg-white/5" variant="ghost" v-for="button in buttons" :key="button.url" @click="openLink(button.url)">
+    <div
+      v-if="buttons"
+      class="
+        flex flex-row gap-3 max-w-[16rem] justify-between m-2 mb-0 group-data-[collapsible=icon]:flex-col
+        group-data-[collapsible=icon]:items-center
+      "
+    >
+      <Button class="w-8 h-8 bg-white/5" variant="ghost" v-for="button in buttons" :key="button.url" @click="openLink(button.url)">
         <component :size="16" :is="button.icon" v-if="button.icon" />
       </Button>
     </div>
