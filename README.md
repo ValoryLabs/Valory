@@ -2,8 +2,8 @@
 
 # VALORY
 
+[![Better Stack Badge](https://uptime.betterstack.com/status-badges/v1/monitor/1suhk.svg)](https://uptime.betterstack.com/?utm_source=status_badge)
 [![GitHub License](https://img.shields.io/github/license/haxgun/valory?color=green)](https://github.com/haxgun/valory/blob/main/LICENSE)
-[![Website](https://img.shields.io/website?url=https://valory.su)](https://overlay.haxgun.ru/)
 [![Stars](https://img.shields.io/github/stars/haxgun/Valory?style=flat&color=green)](https://github.com/haxgun/valory/stargazers)
 [![Forks](https://img.shields.io/github/forks/haxgun/Valory?style=flat&color=green)](https://github.com/haxgun/Valory/forks)
 [![Issues](https://img.shields.io/github/issues/haxgun/Valory?style=flat)](https://github.com/haxgun/Valory/issues)
