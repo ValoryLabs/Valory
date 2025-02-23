@@ -68,15 +68,8 @@ import { hidden, moveTo, openLink } from '@/utils'
           >
             <Hearts color="#FA4454" :size="20" />
           </Button>
-          <Button
-            aria-label="Status"
-            variant="ghost"
-            @click="openLink('https://status.valory.su/')"
-            class="h-fit w-fit cursor-pointer p-2 hover:bg-[#0F121A]"
-          >
-            <CheckCircle :size="20" />
-          </Button>
         </div>
+        <iframe src="https://status.valory.su/badge?theme=dark" width="250" height="30" frameborder="0" scrolling="no" style="color-scheme: normal"></iframe>
       </div>
       <div
         class="flex"
