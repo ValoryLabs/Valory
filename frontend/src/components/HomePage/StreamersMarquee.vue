@@ -3,11 +3,14 @@ import { STREAMERS_DATA } from '@/data/Streamers.data'
 import Marquee from '@/components/ui/Marquee.vue'
 import StreamersCard from '@/components/ui/StreamersCard.vue'
 
-const middleIndex = Math.floor(STREAMERS_DATA.length / 2)
-const [firstRow, secondRow] = [
+const middleIndex = Math.floor(STREAMERS_DATA.length / 3)
+
+const [firstRow, secondRow, thirdRow] = [
   STREAMERS_DATA.slice(0, middleIndex),
-  STREAMERS_DATA.slice(middleIndex),
-]
+  STREAMERS_DATA.slice(middleIndex, 2 * middleIndex),
+  STREAMERS_DATA.slice(2 * middleIndex)
+];
+
 </script>
 
 <template>
@@ -16,6 +19,7 @@ const [firstRow, secondRow] = [
   >
     <Marquee pause-on-hover class="[--duration:180s]">
       <StreamersCard
+        v-memo="[streamer]"
         v-for="streamer in firstRow"
         :key="streamer.username"
         :img="streamer.img"
@@ -27,7 +31,20 @@ const [firstRow, secondRow] = [
     </Marquee>
     <Marquee reverse pause-on-hover class="[--duration:180s]">
       <StreamersCard
+        v-memo="[streamer]"
         v-for="streamer in secondRow"
+        :key="streamer.username"
+        :img="streamer.img"
+        :username="streamer.username"
+        :followers="streamer.followers"
+        :live="streamer.live"
+        :verified="streamer.verified"
+      />
+    </Marquee>
+    <Marquee pause-on-hover class="[--duration:180s]">
+      <StreamersCard
+        v-memo="[streamer]"
+        v-for="streamer in thirdRow"
         :key="streamer.username"
         :img="streamer.img"
         :username="streamer.username"

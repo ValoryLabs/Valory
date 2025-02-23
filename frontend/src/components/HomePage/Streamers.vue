@@ -16,7 +16,7 @@ import StreamersMarquee from '@/components/HomePage/StreamersMarquee.vue'
       <span class="whitespace-pre-line text-center text-base font-normal text-[#CECECE]">
         {{ $t('streamers.subtitle') }}
       </span>
-      <div class="container">
+      <div class="max-w-[98dvw]">
         <StreamersMarquee />
       </div>
     </div>
