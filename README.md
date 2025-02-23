@@ -27,7 +27,9 @@ We welcome contributions! Here’s how to get involved:
 
 **Report Bugs**: Open an issue [here](https://github.com/haxgun/valory/issues).  
 **Submit Features:** Create a [pull request](https://github.com/haxgun/valory/pulls).  
-**Share the Love:** Star the repo and spread the word!  
+**Share the Love:** Star the repo and spread the word! 
+
+![Alt](https://repobeats.axiom.co/api/embed/e71816a7a6515ea08c255c65b6cc812da80d4796.svg "Repobeats analytics image")
 
 ## License  
 **Valory** is licensed under the **[MIT License](https://github.com/haxgun/valory/blob/main/LICENSE)**
