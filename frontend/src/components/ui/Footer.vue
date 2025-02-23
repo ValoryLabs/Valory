@@ -21,7 +21,7 @@ import CheckCircle from "@/components/icons/CheckCircle.vue";
         <span class="whitespace-pre-line text-sm font-normal">
           {{ $t('footer.left.description') }}
         </span>
-        <span class="text-[#6f6f6f] text-xs">
+        <span class="text-[#7D7D7D] text-xs">
           © 2023-2025 Valory. {{ $t('footer.copyright') }}
         </span>
         <div class="flex flex-wrap gap-2">
