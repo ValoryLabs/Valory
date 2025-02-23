@@ -71,7 +71,6 @@ const triggerConfetti = () => {
       <span class="flex w-full flex-col gap-3 lg:flex-row">
         <Button :class="[hidden ? 'h-12 text-lg' : 'text-sm']">
           {{ $t('main.buttons.first') }}
-          <Play :size="16" />
         </Button>
         <Button variant="ghost" :class="[hidden ? 'h-12 text-lg' : 'text-sm']">
           {{ $t('main.buttons.second') }}
