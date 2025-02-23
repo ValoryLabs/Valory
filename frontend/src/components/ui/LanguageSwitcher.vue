@@ -1,4 +1,8 @@
 <script lang="ts" setup>
+import { useLocalStorage } from '@vueuse/core'
+import { Globe04 } from 'untitledui-js/vue'
+import { useI18n } from 'vue-i18n'
+
 import { Button } from '@/components/ui/button'
 import {
   DropdownMenu,
@@ -9,12 +13,7 @@ import {
   DropdownMenuSeparator,
   DropdownMenuTrigger,
 } from '@/components/ui/dropdown-menu'
-
-import { Globe04 } from 'untitledui-js/vue'
-
 import { AVAILABLE_LOCALES } from '@/i18n.ts'
-import { useLocalStorage } from '@vueuse/core'
-import { useI18n } from 'vue-i18n'
 
 const { locale } = useI18n<{ locale: string; availableLocales: string[] }>()
 const currentLocale = useLocalStorage<string>('lang', 'en')

@@ -1,11 +1,11 @@
 <script setup lang="ts">
-import { NAV_DATA } from '@/data/HeaderNav.data'
 import Twitch from '@/components/icons/Socials/Twitch.vue'
 import Valory from '@/components/icons/Valory.vue'
-import { Button } from '@/components/ui/button'
 import LanguageSwitcher from '@/components/ui/LanguageSwitcher.vue'
-import { hidden } from '@/utils'
+import { Button } from '@/components/ui/button'
+import { NAV_DATA } from '@/data/HeaderNav.data'
 import router from '@/router'
+import { hidden } from '@/utils'
 import { moveTo } from '@/utils'
 </script>
 

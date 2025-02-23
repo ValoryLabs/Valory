@@ -1,10 +1,11 @@
-import Valorant from '@/components/icons/Socials/Valorant.vue'
-import Spotify from '@/components/icons/Socials/Spotify.vue'
-import Twitch from '@/components/icons/Socials/Twitch.vue'
-import Github from '@/components/icons/Socials/Github.vue'
+import { BookClosed, Hearts, HelpCircle, HomeLine, LayersThree01, Link03 } from 'untitledui-js/vue'
+
 import Discord from '@/components/icons/Socials/Discord.vue'
+import Github from '@/components/icons/Socials/Github.vue'
+import Spotify from '@/components/icons/Socials/Spotify.vue'
 import Telegram from '@/components/icons/Socials/Telegram.vue'
-import { Link03, HelpCircle, BookClosed, Hearts, HomeLine, LayersThree01 } from "untitledui-js/vue";
+import Twitch from '@/components/icons/Socials/Twitch.vue'
+import Valorant from '@/components/icons/Socials/Valorant.vue'
 
 interface NavItem {
   title: string

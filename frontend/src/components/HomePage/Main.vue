@@ -1,10 +1,11 @@
 <script setup lang="ts">
-import useConfetti from '@/composables/useConfetti'
-import Sparkles from '@/components/ui/Sparkles.vue'
+import { Stars02 } from 'untitledui-js/vue'
+
 import Discord from '@/components/icons/Socials/Discord.vue'
+import Sparkles from '@/components/ui/Sparkles.vue'
 import { Button } from '@/components/ui/button'
+import useConfetti from '@/composables/useConfetti'
 import { hidden } from '@/utils'
-import { Stars02 } from "untitledui-js/vue";
 
 function randomInRange(min: number, max: number) {
   return Math.random() * (max - min) + min

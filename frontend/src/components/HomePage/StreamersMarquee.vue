@@ -1,16 +1,15 @@
 <script setup lang="ts">
-import { STREAMERS_DATA } from '@/data/Streamers.data'
 import Marquee from '@/components/ui/Marquee.vue'
 import StreamersCard from '@/components/ui/StreamersCard.vue'
+import { STREAMERS_DATA } from '@/data/Streamers.data'
 
 const middleIndex = Math.floor(STREAMERS_DATA.length / 3)
 
 const [firstRow, secondRow, thirdRow] = [
   STREAMERS_DATA.slice(0, middleIndex),
   STREAMERS_DATA.slice(middleIndex, 2 * middleIndex),
-  STREAMERS_DATA.slice(2 * middleIndex)
-];
-
+  STREAMERS_DATA.slice(2 * middleIndex),
+]
 </script>
 
 <template>

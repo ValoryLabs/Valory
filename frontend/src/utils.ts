@@ -1,5 +1,7 @@
+import { useWindowSize } from '@vueuse/core'
 import { type ClassValue, clsx } from 'clsx'
 import { twMerge } from 'tailwind-merge'
+import { computed } from 'vue'
 
 export const openLink = (url: string) => {
   window.open(url, '_blank')
@@ -8,9 +10,6 @@ export const openLink = (url: string) => {
 export function cn(...inputs: ClassValue[]) {
   return twMerge(clsx(inputs))
 }
-
-import { useWindowSize } from '@vueuse/core'
-import { computed } from 'vue'
 
 const { width } = useWindowSize()
 

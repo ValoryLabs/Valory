@@ -1,11 +1,12 @@
 <script lang="ts" setup>
 import { useFetch } from '@vueuse/core'
-import { openLink } from '@/utils'
+import { GitBranch01, Star01 } from 'untitledui-js/vue'
 import { computed, ref } from 'vue'
-import { Button } from '@/components/ui/button'
-import { Star01, GitBranch01 } from 'untitledui-js/vue'
 
 import Github from '@/components/icons/Socials/Github.vue'
+import { Button } from '@/components/ui/button'
+import { openLink } from '@/utils'
+
 const repoUrl = ref('https://api.github.com/repos/ValoryApp/Valory')
 const contributorsUrl = ref('https://api.github.com/repos/ValoryApp/Valory/contributors')
 
@@ -30,10 +31,7 @@ const contributorsCount = computed(() => contributorsData.value?.length ?? 0)
       <Button @click="openLink('https://github.com/ValoryApp/Valory')" class="px-6"
         >{{ $t('source.contribute') }} ({{ contributorsCount }})</Button
       >
-      <Button
-        variant="outline2"
-        @click="openLink('https://github.com/ValoryApp/Valory/forks')"
-      >
+      <Button variant="outline2" @click="openLink('https://github.com/ValoryApp/Valory/forks')">
         <GitBranch01 :size="22" />
         {{ forksCount }}
       </Button>

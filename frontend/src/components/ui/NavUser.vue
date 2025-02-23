@@ -1,6 +1,8 @@
 <script setup lang="ts">
-import { Avatar, AvatarFallback, AvatarImage } from '@/components/ui/avatar'
+import { ChevronsUpDown, LogOut } from 'lucide-vue-next'
+import { Globe04, Settings02 } from 'untitledui-js/vue'
 
+import { Avatar, AvatarFallback, AvatarImage } from '@/components/ui/avatar'
 import {
   DropdownMenu,
   DropdownMenuContent,
@@ -16,8 +18,6 @@ import {
   SidebarMenuItem,
   useSidebar,
 } from '@/components/ui/sidebar'
-import { ChevronsUpDown, LogOut } from 'lucide-vue-next'
-import { Settings02, Globe04 } from 'untitledui-js/vue'
 
 const props = defineProps<{
   user: {

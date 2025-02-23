@@ -1,7 +1,8 @@
 <script setup lang="ts">
 import { defineAsyncComponent } from 'vue'
-import Header from '@/components/ui/Header.vue'
+
 import Main from '@/components/HomePage/Main.vue'
+import Header from '@/components/ui/Header.vue'
 import { hidden } from '@/utils'
 
 const Features = defineAsyncComponent(() => import('@/components/HomePage/Features.vue'))

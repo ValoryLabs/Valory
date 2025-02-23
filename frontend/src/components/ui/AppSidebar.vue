@@ -1,8 +1,9 @@
 <script setup lang="ts">
-import { type SidebarProps, SidebarTrigger } from '@/components/ui/sidebar'
-
+import Valory from '@/components/icons/Valory.vue'
+import NavExtra from '@/components/ui/NavExtra.vue'
 import NavMain from '@/components/ui/NavMain.vue'
 import NavUser from '@/components/ui/NavUser.vue'
+import { type SidebarProps, SidebarTrigger } from '@/components/ui/sidebar'
 import {
   Sidebar,
   SidebarContent,
@@ -10,10 +11,7 @@ import {
   SidebarHeader,
   SidebarRail,
 } from '@/components/ui/sidebar'
-
 import { NAV_DATA } from '@/data/dashboard/HeaderNav.data'
-import Valory from '@/components/icons/Valory.vue'
-import NavExtra from '@/components/ui/NavExtra.vue'
 
 const props = withDefaults(defineProps<SidebarProps>(), {
   collapsible: 'icon',

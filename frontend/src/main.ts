@@ -1,13 +1,12 @@
-import '@/assets/main.css'
-
-import { createApp } from 'vue'
+import { createHead } from '@unhead/vue/client'
 import { createPinia } from 'pinia'
+import VWave from 'v-wave'
+import { createApp } from 'vue'
 
 import App from '@/App.vue'
-import router from '@/router'
-import VWave from 'v-wave'
-import { createHead } from '@unhead/vue/client'
+import '@/assets/main.css'
 import { i18n } from '@/i18n'
+import router from '@/router'
 
 const app = createApp(App)
 const head = createHead()

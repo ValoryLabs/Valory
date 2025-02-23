@@ -1,6 +1,6 @@
 <script lang="ts" setup>
-import { openLink } from '@/utils'
 import TwitchVerify from '@/components/icons/TwitchVerify.vue'
+import { openLink } from '@/utils'
 
 interface Props {
   img: string
@@ -16,7 +16,7 @@ defineProps<Props>()
 <template>
   <figure
     @click="openLink(`https://twitch.tv/${username}`)"
-    class="relative w-64 cursor-pointer overflow-hidden rounded-xl border border-transparent bg-[#0F0F0F] p-4 hover:bg-white/10 transition-colors"
+    class="relative w-64 cursor-pointer overflow-hidden rounded-xl border border-transparent bg-[#0F0F0F] p-4 transition-colors hover:bg-white/10"
   >
     <div class="flex flex-row items-center gap-2">
       <div class="relative h-fit">
