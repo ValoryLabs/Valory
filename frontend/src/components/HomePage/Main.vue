@@ -68,7 +68,7 @@ const triggerConfetti = () => {
         {{ $t('main.subtitle') }}
       </span>
       <span class="flex w-full flex-col gap-3 lg:flex-row">
-        <Button :class="[hidden ? 'h-12 text-lg' : 'text-sm']">
+        <Button @click="$router.push('/dashboard')" :class="[hidden ? 'h-12 text-lg' : 'text-sm']">
           {{ $t('main.buttons.first') }}
         </Button>
         <Button variant="ghost" :class="[hidden ? 'h-12 text-lg' : 'text-sm']">

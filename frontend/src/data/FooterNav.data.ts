@@ -38,7 +38,7 @@ export const FOOTER_NAV_PRODUCT_DATA: FooterNavData[] = [
       },
       {
         name: 'better',
-        url: '/login',
+        url: '/dashboard',
       },
     ],
   },
