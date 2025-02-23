@@ -8,6 +8,7 @@ import vueJsx from '@vitejs/plugin-vue-jsx'
 import VueI18nPlugin from '@intlify/unplugin-vue-i18n/vite'
 import path from "node:path";
 import { ViteMinifyPlugin } from 'vite-plugin-minify'
+import webfontDownload from 'vite-plugin-webfont-dl';
 
 // https://vite.dev/config/
 export default defineConfig({
@@ -24,6 +25,7 @@ export default defineConfig({
       module: 'petite-vue-i18n',
       include: [path.resolve(__dirname, './src/locales/**')],
     }),
+    webfontDownload(['https://fonts.googleapis.com/css2?family=Inter:ital,opsz,wght@0,14..32,100..900;1,14..32,100..900&family=Russo+One&display=swap']),
   ],
   clearScreen: false,
   resolve: {
