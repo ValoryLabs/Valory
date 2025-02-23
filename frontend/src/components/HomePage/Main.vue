@@ -83,7 +83,13 @@ const triggerConfetti = () => {
       v-if="!hidden"
       class="before:pointer-events-none before:absolute before:bottom-[18rem] before:right-[-30px] before:-z-10 before:h-[400px] before:w-[400px] before:rounded-full before:bg-[#A80026]/40 before:blur-[200px] before:content-['']"
     >
-      <img src="/images/ValoryLogo3D.webp" height="321" width="314" alt="Valory 3D" fetchpriority="high" />
+      <img
+        src="/images/ValoryLogo3D.webp"
+        height="321"
+        width="314"
+        alt="Valory 3D"
+        fetchpriority="high"
+      />
     </div>
   </section>
 </template>
