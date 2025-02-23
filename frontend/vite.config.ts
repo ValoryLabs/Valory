@@ -11,10 +11,6 @@ import { ViteMinifyPlugin } from 'vite-plugin-minify'
 
 // https://vite.dev/config/
 export default defineConfig({
-  server: {
-    host: '0.0.0.0',
-    port: 3000,
-  },
   css: {
     postcss: {
       plugins: [tailwind(), autoprefixer()],
