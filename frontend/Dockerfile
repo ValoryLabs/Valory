@@ -1,19 +1,10 @@
-FROM oven/bun:1 AS base
-
-WORKDIR /app
-
-COPY package*.json bun.lock* ./
-
+FROM node:20-alpine as builder
+RUN npm install -g bun
+WORKDIR /code/
+ADD package*.json bun.lock* ./
 RUN bun install
-
-COPY . .
-
-RUN bun build src/index.ts
+ADD . .
+RUN bunx --bun vite build
 
 FROM devforth/spa-to-http:latest
-
-COPY --from=builder /app/dist/ .
-
-EXPOSE 8080
-
-CMD ["spa-to-http"]
+COPY --from=builder /code/dist/ .
