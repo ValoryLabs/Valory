@@ -16,14 +16,15 @@ Enhance your stream with sleek visuals and keep your viewers engaged with real-t
 </p>
 
 ## Features  
-- **Real-Time:** Get up-to-date game stats instantly.  
-- **Sleek Design:** Modern visuals that fit any stream.  
-- **Fully Customizable:** Tailor colors, layouts, and more.  
-- **Easy Setup:** Minimal effort required, works out of the box.  
-- **Stream Software Integration:** Compatible with OBS, Streamlabs, and more.  
+**Real-Time:** Get up-to-date game stats instantly.  
+**Sleek Design:** Modern visuals that fit any stream.  
+**Fully Customizable:** Tailor colors, layouts, and more.  
+**Easy Setup:** Minimal effort required, works out of the box.  
+**Stream Software Integration:** Compatible with OBS, Streamlabs, and more.  
 
 ## Contributing  
 We welcome contributions! Here’s how to get involved:  
+
 **Report Bugs**: Open an issue [here](https://github.com/haxgun/valory/issues).  
 **Submit Features:** Create a [pull request](https://github.com/haxgun/valory/pulls).  
 **Share the Love:** Star the repo and spread the word!  
