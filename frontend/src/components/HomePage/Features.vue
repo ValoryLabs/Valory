@@ -46,10 +46,11 @@ import { hidden } from '@/utils.js'
         </div>
         <img
           v-if="!hidden"
-          width="376"
-          height="327"
+          width="327"
+          height="376"
           src="/images/features.webp"
           alt="Features"
+          class="w-auto"
           fetchpriority="low"
         />
       </div>
