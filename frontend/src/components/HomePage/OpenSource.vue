@@ -32,14 +32,14 @@ const contributorsCount = computed(() => contributorsData.value?.length ?? 0)
       >
       <Button
         @click="openLink('https://github.com/ValoryApp/Valory/forks')"
-        class="gap-1 border border-white/10 bg-[#19191A] px-3 text-[#F2F2F2]"
+        class="gap-1 border border-white/10 bg-[#19191A] px-3 text-[#F2F2F2] hover:border-white"
       >
         <GitBranch01 :size="22" />
         {{ forksCount }}
       </Button>
       <Button
         @click="openLink('https://github.com/ValoryApp/Valory/stargazers')"
-        class="gap-1 border border-white/10 bg-[#19191A] px-3 text-[#F2F2F2]"
+        class="gap-1 border border-white/10 bg-[#19191A] px-3 text-[#F2F2F2] hover:border-white"
       >
         <Star01 color="#E3B341" :size="22" />
         {{ starsCount }}
