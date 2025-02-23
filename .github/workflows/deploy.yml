@@ -40,4 +40,4 @@ jobs:
 
       - name: Deploy to server
         run: |
-          ssh -o StrictHostKeyChecking=no ${{ secrets.SERVER_USERNAME }}@${{ secrets.SERVER_HOST }} "cd ${{ secrets.SERVER_PATH }} && git pull && docker-compose down && docker-compose up -d --build"
+          ssh -o StrictHostKeyChecking=no ${{ secrets.SERVER_USERNAME }}@${{ secrets.SERVER_HOST }} "git config --global --add safe.directory ${{ secrets.SERVER_PATH }} &&cd ${{ secrets.SERVER_PATH }} && git pull && docker-compose down && docker-compose up -d --build"
