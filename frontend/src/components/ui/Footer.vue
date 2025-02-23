@@ -1,6 +1,6 @@
 <script setup lang="ts">
 import { FOOTER_NAV_PRODUCT_DATA } from '@/data/FooterNav.data'
-import { hidden, openLink } from '@/utils'
+import { hidden, moveTo, openLink } from "@/utils";
 import { Button } from '@/components/ui/button'
 import Github from '@/components/icons/Socials/Github.vue'
 import Valory from '@/components/icons/Valory.vue'
@@ -10,14 +10,20 @@ import Telegram from '@/components/icons/Socials/Telegram.vue'
 import { Hearts } from 'untitledui-js/vue'
 </script>
 <template>
-  <footer class="container m-auto mt-16 flex flex-col gap-10">
+  <footer class="container m-auto py-16 flex flex-col gap-10">
     <div class="flex justify-between gap-8">
-      <div class="flex flex-col gap-8" :class="[hidden ? 'max-w-52' : '']">
-        <Valory :size="25" />
-        <span class="whitespace-pre-line font-normal">
+      <div class="flex flex-col gap-4" :class="[hidden ? 'max-w-52' : '']">
+        <div @click="moveTo('main')" class="flex flex-row gap-3 items-center">
+          <Valory :size="25" />
+          <span class="font-valory text-lg hover:text-gray-300 cursor-pointer transition-colors">VALORY</span>
+        </div>
+        <span class="whitespace-pre-line text-sm font-normal">
           {{ $t('footer.left.description') }}
         </span>
-        <div class="flex flex-wrap gap-4">
+        <span class="text-[#6f6f6f] text-xs">
+          © 2023-2025 Valory. {{ $t('footer.copyright') }}
+        </span>
+        <div class="flex flex-wrap gap-2">
           <Button
             aria-label="Github"
             @click="openLink('https://github.com/ValoryApp/Valory')"
@@ -86,10 +92,6 @@ import { Hearts } from 'untitledui-js/vue'
           </div>
         </div>
       </div>
-    </div>
-    <div class="flex items-center justify-between gap-3 border-t border-white/20 py-10">
-      <span class="text-normal">Valory © {{ $t('footer.copyright') }}</span>
-      <span class="text-normal text-right">{{ $t('footer.love') }}</span>
     </div>
   </footer>
 </template>

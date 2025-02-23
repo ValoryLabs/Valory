@@ -37,7 +37,7 @@ const triggerConfetti = () => {
 </script>
 
 <template>
-  <section class="relative mt-[-5rem] flex h-dvh items-center justify-between">
+  <section id="main" class="relative mt-[-5rem] flex h-dvh items-center justify-between">
     <div
       class="relative flex flex-col items-start justify-center gap-9"
       :class="[hidden ? 'w-full' : '']"
