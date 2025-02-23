@@ -40,6 +40,7 @@ export default defineConfig({
       manualChunks: {
         vue: ['vue'],
         'vue-router': ['vue-router'],
+        'vue-i18n': ['vue-i18n'],
         pinia: ['pinia'],
       },
     },
