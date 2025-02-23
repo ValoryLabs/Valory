@@ -66,7 +66,6 @@ import Donation from '@/components/icons/Donation.vue'
       >
         <div
           v-for="nav in FOOTER_NAV_PRODUCT_DATA"
-          v-memo="[nav]"
           :key="nav.title"
           class="flex flex-col gap-2"
         >
