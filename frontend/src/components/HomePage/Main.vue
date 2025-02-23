@@ -4,7 +4,6 @@ import Sparkles from '@/components/ui/Sparkles.vue'
 import Discord from '@/components/icons/Socials/Discord.vue'
 import { Button } from '@/components/ui/button'
 import { hidden } from '@/utils'
-import { Play } from "untitledui-js/vue";
 import { Stars02 } from "untitledui-js/vue";
 
 function randomInRange(min: number, max: number) {
