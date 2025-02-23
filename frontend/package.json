@@ -37,6 +37,7 @@
   },
   "devDependencies": {
     "@inspira-ui/plugins": "^0.0.1",
+    "@trivago/prettier-plugin-sort-imports": "^5.2.2",
     "@tsconfig/node22": "^22.0.0",
     "@types/node": "^22.13.1",
     "@vitejs/plugin-vue": "^5.2.1",
