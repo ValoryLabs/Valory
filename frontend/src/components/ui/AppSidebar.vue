@@ -38,7 +38,7 @@ const data = NAV_DATA
     </SidebarHeader>
     <SidebarContent class="relative text-lg">
       <NavMain :items="data.navMain" />
-      <NavExtra class="absolute bottom-0" :items="data.navExtra" :buttons="data.buttons"/>
+      <NavExtra class="absolute bottom-0" :items="data.navExtra" :buttons="data.buttons" />
     </SidebarContent>
     <SidebarFooter>
       <NavUser :user="data.user" />

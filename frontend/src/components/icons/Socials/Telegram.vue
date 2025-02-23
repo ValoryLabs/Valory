@@ -33,4 +33,3 @@ const props = withDefaults(defineProps<Props>(), {
     </defs>
   </svg>
 </template>
-

@@ -1,15 +1,15 @@
 import Home from '@/components/icons/Home.vue'
-import LayersTwo from "@/components/icons/Layout/LayersTwo.vue";
-import Valorant from "@/components/icons/Socials/Valorant.vue";
-import Spotify from "@/components/icons/Socials/Spotify.vue";
-import Link from "@/components/icons/General/Link.vue";
-import HelpCircle from "@/components/icons/General/HelpCircle.vue";
-import BookClosed from "@/components/icons/Education/BookClosed.vue";
-import Twitch from "@/components/icons/Socials/Twitch.vue";
-import Github from "@/components/icons/Socials/Github.vue";
-import Discord from "@/components/icons/Socials/Discord.vue";
-import Telegram from "@/components/icons/Socials/Telegram.vue";
-import Donation from "@/components/icons/Donation.vue";
+import LayersTwo from '@/components/icons/Layout/LayersTwo.vue'
+import Valorant from '@/components/icons/Socials/Valorant.vue'
+import Spotify from '@/components/icons/Socials/Spotify.vue'
+import Link from '@/components/icons/General/Link.vue'
+import HelpCircle from '@/components/icons/General/HelpCircle.vue'
+import BookClosed from '@/components/icons/Education/BookClosed.vue'
+import Twitch from '@/components/icons/Socials/Twitch.vue'
+import Github from '@/components/icons/Socials/Github.vue'
+import Discord from '@/components/icons/Socials/Discord.vue'
+import Telegram from '@/components/icons/Socials/Telegram.vue'
+import Donation from '@/components/icons/Donation.vue'
 
 interface NavItem {
   title: string
@@ -69,12 +69,12 @@ export const NAV_DATA: NavData = {
         {
           title: 'Valorant',
           url: '#',
-          icon: Valorant
+          icon: Valorant,
         },
         {
           title: 'Spotify',
           url: '#',
-          icon: Spotify
+          icon: Spotify,
         },
       ],
     },
@@ -121,6 +121,6 @@ export const NAV_DATA: NavData = {
     {
       icon: Donation,
       url: 'https://www.donationalerts.com/r/haxgun',
-    }
-  ]
+    },
+  ],
 }

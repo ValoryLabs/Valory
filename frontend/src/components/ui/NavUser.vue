@@ -17,8 +17,8 @@ import {
   useSidebar,
 } from '@/components/ui/sidebar'
 import { BadgeCheck, Bell, ChevronsUpDown, CreditCard, LogOut, Sparkles } from 'lucide-vue-next'
-import Language from "@/components/icons/Language.vue";
-import Settings from "@/components/icons/General/Settings.vue";
+import Language from '@/components/icons/Language.vue'
+import Settings from '@/components/icons/General/Settings.vue'
 
 const props = defineProps<{
   user: {
@@ -70,11 +70,11 @@ const { isMobile } = useSidebar()
           <DropdownMenuSeparator />
           <DropdownMenuGroup>
             <DropdownMenuItem>
-              <Settings/>
+              <Settings />
               Settings
             </DropdownMenuItem>
             <DropdownMenuItem>
-              <Language/>
+              <Language />
               Language
             </DropdownMenuItem>
           </DropdownMenuGroup>

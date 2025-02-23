@@ -6,8 +6,8 @@ import {
   SidebarMenuButton,
   SidebarMenuItem,
 } from '@/components/ui/sidebar'
-import { Button } from "@/components/ui/button";
-import { openLink } from "@/utils";
+import { Button } from '@/components/ui/button'
+import { openLink } from '@/utils'
 
 defineProps<{
   title?: string
@@ -38,12 +38,15 @@ defineProps<{
     </SidebarMenu>
     <div
       v-if="buttons"
-      class="
-        flex flex-row gap-3 max-w-[16rem] justify-between m-2 mb-0 group-data-[collapsible=icon]:flex-col
-        group-data-[collapsible=icon]:items-center
-      "
+      class="m-2 mb-0 flex max-w-[16rem] flex-row justify-between gap-3 group-data-[collapsible=icon]:flex-col group-data-[collapsible=icon]:items-center"
     >
-      <Button class="w-8 h-8 bg-white/5" variant="ghost" v-for="button in buttons" :key="button.url" @click="openLink(button.url)">
+      <Button
+        class="h-8 w-8 bg-white/5"
+        variant="ghost"
+        v-for="button in buttons"
+        :key="button.url"
+        @click="openLink(button.url)"
+      >
         <component :size="16" :is="button.icon" v-if="button.icon" />
       </Button>
     </div>
