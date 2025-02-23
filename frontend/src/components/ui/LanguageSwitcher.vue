@@ -1,38 +1,52 @@
 <script lang="ts" setup>
-import DropdownMenu from '@/components/ui/DropdownMenu/DropdownMenu.vue'
-import DropdownMenuItem from '@/components/ui/DropdownMenu/DropdownMenuItem.vue'
-import { AVAILABLE_LOCALES } from '@/i18n'
+import { Button } from '@/components/ui/button'
+import {
+  DropdownMenu,
+  DropdownMenuContent,
+  DropdownMenuLabel,
+  DropdownMenuRadioGroup,
+  DropdownMenuRadioItem,
+  DropdownMenuSeparator,
+  DropdownMenuTrigger,
+} from '@/components/ui/dropdown-menu'
+
+import Language from '@/components/icons/Language.vue'
+
+import { AVAILABLE_LOCALES } from '@/i18n.ts'
 import { useLocalStorage } from '@vueuse/core'
 import { useI18n } from 'vue-i18n'
 
 const { locale } = useI18n<{ locale: string; availableLocales: string[] }>()
-const currentLocale = useLocalStorage<string>('valory-locale', 'en')
+const currentLocale = useLocalStorage<string>('lang', 'en')
 </script>
 
 <template>
-  <div>
-    <DropdownMenu size="medium">
-      <DropdownMenuItem
-        v-for="lang of AVAILABLE_LOCALES"
-        :key="lang.code"
-        :checked="currentLocale === lang.code"
-        @select="
-          () => {
-            locale = lang.code
-            currentLocale = lang.code
-          }
-        "
-      >
-        <Icon :icon="`flag:${lang.flag}-4x3`" height="18" width="18" />
-        {{ lang.name }}
-      </DropdownMenuItem>
-      <template #title>
-        {{ $t('landing.languageSwitcher') }}
-      </template>
-      <template #button>
-        <Icon :icon="`flag:${$t('flag')}-4x3`" height="18" width="18" />
-        <!--        {{ $t('languageName') }}-->
-      </template>
-    </DropdownMenu>
-  </div>
+  <DropdownMenu>
+    <DropdownMenuTrigger as-child>
+      <Button aria-label="Language switcher" variant="ghost" class="w-9 px-2">
+        <Language :size="16" />
+      </Button>
+    </DropdownMenuTrigger>
+    <DropdownMenuContent class="w-40">
+      <DropdownMenuLabel>
+        {{ $t('nav.language') }}
+      </DropdownMenuLabel>
+      <DropdownMenuSeparator />
+      <DropdownMenuRadioGroup v-model="currentLocale">
+        <DropdownMenuRadioItem
+          v-for="lang of AVAILABLE_LOCALES"
+          :key="lang.code"
+          :value="lang.code"
+          @select="
+            () => {
+              locale = lang.code
+              currentLocale = lang.code
+            }
+          "
+        >
+          {{ lang.name }}
+        </DropdownMenuRadioItem>
+      </DropdownMenuRadioGroup>
+    </DropdownMenuContent>
+  </DropdownMenu>
 </template>

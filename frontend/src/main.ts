@@ -1,16 +1,21 @@
-import App from '@/App.vue'
-import { i18n } from '@/i18n'
-import router from '@/router'
-import { Icon } from '@iconify/vue'
-import { createHead } from '@unhead/vue'
-import { createPinia } from 'pinia'
-import piniaPluginPersistedstate from 'pinia-plugin-persistedstate'
+import '@/assets/main.css'
+
 import { createApp } from 'vue'
+import { createPinia } from 'pinia'
+
+import App from '@/App.vue'
+import router from '@/router'
+import VWave from 'v-wave'
+import { createHead } from '@unhead/vue/client'
+import { i18n } from '@/i18n'
 
 const app = createApp(App)
-const pinia = createPinia()
 const head = createHead()
 
-pinia.use(piniaPluginPersistedstate)
+app.use(createPinia())
+app.use(router)
+app.use(head)
+app.use(i18n)
+app.use(VWave)
 
-app.use(pinia).use(head).use(i18n).use(router).component('Icon', Icon).mount('#app')
+app.mount('#app')

@@ -1,92 +1,77 @@
 {
-  "languageName": "English",
-  "flag": "us",
+  "lang": "English",
   "nav": {
-    "home": "Home",
-    "configuration": "Configuration"
+    "features": "Features",
+    "streamers": "Streamers",
+    "source": "Open Source",
+    "language": "Language",
+    "login": "Try for free"
   },
-  "landing": {
-    "pretitle": "STREAM OVERLAY 2.0",
-    "description": "Grab your audience's attention with real-time VALORANT stats!",
-    "features": {
-      "first": "Customize your overlay according to your stream.",
-      "second": "It's absolutely FREE! There is support for many popular streaming programs like OBS and others.",
-      "third": "Setup once and everything will always work!"
-    },
+  "main": {
+    "discord": "Be part of our Discord family!",
+    "title": "The ultimate tool\nfor STREAM.",
+    "subtitle": "Show your Valorant stats effortlessly.\nEngage your audience and keep the focus on the game",
     "buttons": {
-      "first": "How does it work?",
-      "second": {
-        "auth": "Create your overlay",
-        "unauth": "Login with Twitch"
-      }
-    },
-    "languageSwitcher": "Select a language",
-    "footer": {
-      "powered_by": "Powered by",
-      "made": "Made with"
+      "first": "Let's start!",
+      "second": "How does it work?"
     }
   },
-  "editor": {
-    "header": {
-      "title": "Overlay with statistics",
-      "description": "Show your players' statistics in your stream!"
-    },
-    "profile": {
-      "title": "Profile",
-      "description": "Find your profile and paste HenrikDEV API key",
-      "button": "Open",
-      "riotId": {
-        "title": "Riot ID",
-        "description": "Riot ID is your universal identifier that is used in all Riot Games.",
-        "button": "Submit",
-        "random": "Click to substitute an example of Riot ID."
+  "features": {
+    "category": "Features",
+    "title": "Everything You Need to Elevate Your Stream",
+    "subtitle": " Packed with powerful tools, our app makes it effortless to display and\ncustomize your Valorant stats. From seamless setup to full\npersonalization, we’ve got everything to make your stream shine.",
+    "blocks": {
+      "first": {
+        "title": "Compatible with Popular Streaming Software",
+        "description": "We support all major streaming platforms,\nincluding OBS Studio, Streamlabs, XSplit, and more.\nIntegration is quick and easy, ensuring your stats\nare live without technical hassle."
       },
-      "hdevKey": {
-        "title": "HenrikDEV API",
-        "description": "We use a custom API to interact with Valorant to get the data.",
-        "instruction": "To get it, follow the instructions.",
-        "button": "Submit",
-        "instruction-dis": "Instructions on how to get an API key"
+      "second": {
+        "title": "Design Reflects Your Style",
+        "description": "Make your stream yours!\nCustomize overlay colors and layout to match\nyour unique style and stand out with\na professional look."
+      },
+      "third": {
+        "title": "Set It and Forget It",
+        "description": "Enjoy a hassle-free experience!\nOnce you set up the overlay, the app works\nautomatically to display your live stats,\nensuring everything stays updated\nwithout requiring manual adjustments."
       }
-    },
-    "configuration": {
-      "title": "Configuration",
-      "reset": "Clear all",
-      "button": "Open",
-      "description": "Modify selected options to match your brand",
-      "display": {
-        "title": "Display option",
-        "description": "Switch it if you want to remove",
-        "items": {
-          "background": "Background",
-          "progress": "Progress",
-          "statistics": "Statistics"
-        }
-      },
-      "color": {
-        "title": "Color option",
-        "description": "Customize the color of your elements to match your style and branding",
-        "items": {
-          "background": "Background",
-          "main": "Text",
-          "primary": "Primary",
-          "progress": "Progress",
-          "win": "Win",
-          "lose": "Lose"
-        }
-      },
-      "statistics": {
-        "title": "Statistics",
-        "description": "Switch it if you want to remove the statistics"
-      }
-    },
-    "url": {
-      "title": "Overlay URL",
-      "description": "Copypaste this into your streaming app (in OBS Studio: Sources → Browser).",
-      "dimensions": "Dimensions: 386 x 113"
-    },
-    "preview": {
-      "title": "Your overlay will display here after you set up your profile"
     }
+  },
+  "streamers": {
+    "category": "LEGENDS",
+    "title": "Streamers Spotlight",
+    "subtitle": "Top Valorant streamers already showcase their stats with our app.\nWant to see your name here? Log in to our platform. We might feature you next!",
+    "card": {
+      "followers": "followers"
+    }
+  },
+  "source": {
+    "title": "Open Source",
+    "subtitle": "Our application's source code is fully accessible on GitHub.\nWe welcome everyone to view, utilize, and contribute to its development.",
+    "contribute": "Contribute"
+  },
+  "footer": {
+    "left": {
+      "description": "Showcase your Valorant stats live and keep your\naudience engaged with every headshot and clutch! "
+    },
+    "right": {
+      "sections": {
+        "first": {
+          "title": "Product",
+          "items": {
+            "about": "About us",
+            "contact": "Contact us",
+            "terms": "Terms of Service"
+          }
+        },
+        "second": {
+          "title": "Possibilities",
+          "items": {
+            "how": "How it work?",
+            "better": "Be a better streamer!"
+          }
+        }
+      }
+    },
+    "copyright": "All rights reserved.",
+    "love": "Made with ❤\uFE0F on \uD83C\uDF0E Earth"
   }
 }

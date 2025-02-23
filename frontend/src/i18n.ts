@@ -1,10 +1,15 @@
 import messages from '@intlify/unplugin-vue-i18n/messages'
 import { useLocalStorage } from '@vueuse/core'
 import { nextTick, watch } from 'vue'
-import type { Locale } from 'vue-i18n'
-import { createI18n } from 'vue-i18n'
+import type { I18n, Locale } from 'vue-i18n'
+import { createI18n, registerMessageResolver } from 'vue-i18n'
+import { resolveValue } from '@intlify/core-base'
 
-const getResourceMessages = (resource: any) => resource.default || resource
+registerMessageResolver(resolveValue)
+
+const getResourceMessages = (resource: {
+  default: Record<string, string>
+}): Record<string, string> => resource.default || resource
 
 async function loadLocaleMessages(i18n: I18n, locale: Locale) {
   const messages = await import(`@/locales/${locale}.json`).then(getResourceMessages)
@@ -12,7 +17,7 @@ async function loadLocaleMessages(i18n: I18n, locale: Locale) {
   await nextTick()
 }
 
-const locale = useLocalStorage<Locale>('valory-locale', 'en')
+const locale = useLocalStorage<Locale>('lang', 'en')
 
 watch(locale, (newLocale) => {
   loadLocaleMessages(i18n, newLocale)
@@ -20,16 +25,12 @@ watch(locale, (newLocale) => {
 })
 
 export const AVAILABLE_LOCALES = [
-  { code: 'en', name: 'English', flag: 'us' },
-  { code: 'ru', name: 'Russian', flag: 'ru' },
-  { code: 'ua', name: 'Українська', flag: 'ua' },
-  { code: 'de', name: 'Deutsch', flag: 'de' },
-  { code: 'jp', name: '日本語', flag: 'jp' },
-  { code: 'kz', name: 'Қазақша', flag: 'kz' },
+  { code: 'en', name: 'English' },
+  { code: 'ru', name: 'Русский' },
 ]
 
 export function setLocale(i18n: I18n, locale: Locale) {
-  i18n.global.locale.value = locale
+  i18n.global.locale = locale
 }
 
 function setupI18n() {

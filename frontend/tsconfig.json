@@ -20,15 +20,11 @@
     "noUnusedLocals": true,
     "noUnusedParameters": true,
     "noFallthroughCasesInSwitch": true,
-    "baseUrl": "./frontend",
     "paths": {
       "@/*": [
         "./src/*"
       ]
     },
-    "types": [
-      "@intlify/unplugin-vue-i18n/messages"
-    ]
   },
   "include": [
     "src/**/*.ts",
