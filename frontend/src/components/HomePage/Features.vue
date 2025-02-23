@@ -6,7 +6,7 @@ import { hidden } from '@/utils.js'
   <section id="features" class="container flex flex-col items-center justify-center gap-10">
     <div class="flex flex-col items-center gap-6">
       <span
-        class="inline-block bg-gradient-to-r from-[#5AB2F7] to-[#12CFF3] bg-clip-text text-xs font-bold uppercase text-transparent"
+        class="inline-block text-xs font-bold uppercase text-[#5AB2F7]"
       >
         {{ $t('features.category') }}
       </span>

@@ -6,7 +6,7 @@ import StreamersMarquee from '@/components/HomePage/StreamersMarquee.vue'
   <div id="streamers" class="container m-auto flex flex-col items-center gap-10">
     <div class="flex flex-col items-center gap-6">
       <span
-        class="inline-block bg-gradient-to-r from-[#FF930F] to-[#FFF95B] bg-clip-text text-xs font-bold uppercase text-transparent"
+        class="inline-block text-xs font-bold uppercase text-[#FF930F]"
       >
         {{ $t('streamers.category') }}
       </span>
