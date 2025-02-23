@@ -1,14 +1,14 @@
-FROM node:20-alpine as builder
-
-RUN npm install -g bun
+FROM oven/bun:1 AS base
 
 WORKDIR /app
 
-COPY . .
+COPY package*.json bun.lock* ./
 
 RUN bun install
 
-RUN bun build
+COPY . .
+
+RUN bun build src/index.ts
 
 FROM devforth/spa-to-http:latest
 
