@@ -4,11 +4,9 @@ RUN npm install -g bun
 
 WORKDIR /app
 
-COPY package.json ./
+COPY . .
 
 RUN bun install
-
-COPY . .
 
 RUN bun build
 
