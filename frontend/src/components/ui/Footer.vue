@@ -8,6 +8,7 @@ import Twitch from '@/components/icons/Socials/Twitch.vue'
 import Discord from '@/components/icons/Socials/Discord.vue'
 import Telegram from '@/components/icons/Socials/Telegram.vue'
 import { Hearts } from 'untitledui-js/vue'
+import CheckCircle from "@/components/icons/CheckCircle.vue";
 </script>
 <template>
   <footer class="container m-auto py-16 flex flex-col gap-10">
@@ -63,6 +64,14 @@ import { Hearts } from 'untitledui-js/vue'
             class="h-fit w-fit cursor-pointer p-2"
           >
             <Hearts color="#FA4454" :size="20" />
+          </Button>
+          <Button
+            aria-label="Status"
+            variant="ghost"
+            @click="openLink('https://status.valory.su/')"
+            class="h-fit w-fit cursor-pointer p-2 hover:bg-[#0F121A]"
+          >
+            <CheckCircle :size="20" />
           </Button>
         </div>
       </div>
