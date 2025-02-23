@@ -1,7 +1,5 @@
 <script setup lang="ts">
 import { Hearts } from 'untitledui-js/vue'
-
-import CheckCircle from '@/components/icons/CheckCircle.vue'
 import Discord from '@/components/icons/Socials/Discord.vue'
 import Github from '@/components/icons/Socials/Github.vue'
 import Telegram from '@/components/icons/Socials/Telegram.vue'
