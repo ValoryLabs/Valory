@@ -13,13 +13,13 @@ jobs:
       - name: Checkout code
         uses: actions/checkout@v2
 
-      - name: Go to frontend directory
-        run: cd frontend
-
       - name: Set up Bun
         uses: oven-sh/setup-bun@v2
         with:
           bun-version: latest
+        artifacts:
+          paths:
+            - frontend/
 
       - name: Install dependencies
         run: bun install
