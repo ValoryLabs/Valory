@@ -6,18 +6,7 @@ import { Button } from '@/components/ui/button'
 import LanguageSwitcher from '@/components/ui/LanguageSwitcher.vue'
 import { hidden } from '@/utils'
 import router from '@/router'
-
-const moveTo = (containerId: string) => {
-  const container = document.getElementById(containerId)
-  if (container) {
-    const scrollTopOffset = container.getBoundingClientRect().top + window.scrollY - 25
-    window.scrollTo({
-      top: scrollTopOffset - 70,
-      left: 0,
-      behavior: 'smooth',
-    })
-  }
-}
+import { moveTo } from '@/utils'
 </script>
 
 <template>

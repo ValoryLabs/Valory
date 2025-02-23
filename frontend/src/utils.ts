@@ -16,4 +16,16 @@ const { width } = useWindowSize()
 
 export const hidden = computed(() => width.value < 880)
 
+export const moveTo = (containerId: string) => {
+  const container = document.getElementById(containerId)
+  if (container) {
+    const scrollTopOffset = container.getBoundingClientRect().top + window.scrollY - 25
+    window.scrollTo({
+      top: scrollTopOffset - 70,
+      left: 0,
+      behavior: 'smooth',
+    })
+  }
+}
+
 export type ObjectValues<T> = T[keyof T]
