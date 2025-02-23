@@ -15,10 +15,9 @@ jobs:
 
       - name: Set up Bun
         uses: oven-sh/setup-bun@v2
-        run: cd frontend
 
       - name: Install dependencies
-        run: bun install
+        run: cd frontend && bun install
 
       - name: Run Prettier
         run: bun run format
