@@ -46,9 +46,10 @@ import { hidden } from '@/utils.js'
         </div>
         <img
           v-if="!hidden"
+          width="376"
+          height="327"
           src="/images/features.webp"
           alt="Features"
-          class="h-auto"
           fetchpriority="low"
         />
       </div>
@@ -67,6 +68,8 @@ import { hidden } from '@/utils.js'
         <img
           v-if="!hidden"
           src="/images/configuration.webp"
+          width="382"
+          height="245"
           alt="configuration"
           fetchpriority="low"
         />
