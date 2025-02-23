@@ -19,6 +19,7 @@
         "radix-vue": "^1.9.14",
         "tailwind-merge": "^3.0.1",
         "tailwindcss-animate": "^1.0.7",
+        "untitledui-js": "^2.2.22",
         "v-wave": "^3.0.2",
         "vite-plugin-minify": "^2.1.0",
         "vue": "^3.5.13",
@@ -1035,6 +1036,8 @@
     "unplugin": ["unplugin@1.16.1", "", { "dependencies": { "acorn": "^8.14.0", "webpack-virtual-modules": "^0.6.2" } }, "sha512-4/u/j4FrCKdi17jaxuJA0jClGxB1AvU2hw/IuayPc4ay1XGaJs/rbb4v5WKwAjNifjmXK9PIFyuPiaK8azyR9w=="],
 
     "unplugin-utils": ["unplugin-utils@0.2.4", "", { "dependencies": { "pathe": "^2.0.2", "picomatch": "^4.0.2" } }, "sha512-8U/MtpkPkkk3Atewj1+RcKIjb5WBimZ/WSLhhR3w6SsIj8XJuKTacSP8g+2JhfSGw0Cb125Y+2zA/IzJZDVbhA=="],
+
+    "untitledui-js": ["untitledui-js@2.2.22", "", { "peerDependencies": { "@builder.io/qwik": "^1.0.0", "motion": "^10.0.0 || ^11.0.0", "react": "^17.0.0 || ^18.0.0 || ^19.0.0", "solid-js": "^1.0.0", "vue": "^3.0.0" }, "optionalPeers": ["@builder.io/qwik", "motion", "react", "solid-js", "vue"] }, "sha512-6oJ417v6qsa3JiEJB5vIujVNo/psre9pteCR6TLgamAA74z6BBpRuKYW3K04y8L03+TxGC9W4OfAKiMUPCZVKA=="],
 
     "untyped": ["untyped@1.5.2", "", { "dependencies": { "@babel/core": "^7.26.0", "@babel/standalone": "^7.26.4", "@babel/types": "^7.26.3", "citty": "^0.1.6", "defu": "^6.1.4", "jiti": "^2.4.1", "knitwork": "^1.2.0", "scule": "^1.3.0" }, "bin": { "untyped": "dist/cli.mjs" } }, "sha512-eL/8PlhLcMmlMDtNPKhyyz9kEBDS3Uk4yMu/ewlkT2WFbtzScjHWPJLdQLmaGPUKjXzwe9MumOtOgc4Fro96Kg=="],
 

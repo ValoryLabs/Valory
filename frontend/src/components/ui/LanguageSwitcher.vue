@@ -10,7 +10,7 @@ import {
   DropdownMenuTrigger,
 } from '@/components/ui/dropdown-menu'
 
-import Language from '@/components/icons/Language.vue'
+import { Globe04 } from 'untitledui-js/vue'
 
 import { AVAILABLE_LOCALES } from '@/i18n.ts'
 import { useLocalStorage } from '@vueuse/core'
@@ -24,7 +24,7 @@ const currentLocale = useLocalStorage<string>('lang', 'en')
   <DropdownMenu>
     <DropdownMenuTrigger as-child>
       <Button aria-label="Language switcher" variant="ghost" class="w-9 px-2">
-        <Language :size="16" />
+        <Globe04 :size="16" />
       </Button>
     </DropdownMenuTrigger>
     <DropdownMenuContent class="w-40">

@@ -2,10 +2,10 @@
 import useConfetti from '@/composables/useConfetti'
 import Sparkles from '@/components/ui/Sparkles.vue'
 import Discord from '@/components/icons/Socials/Discord.vue'
-import Start from '@/components/icons/Start.vue'
-import Stars from '@/components/icons/Stars.vue'
 import { Button } from '@/components/ui/button'
 import { hidden } from '@/utils'
+import { Play } from "untitledui-js/vue";
+import { Stars02 } from "untitledui-js/vue";
 
 function randomInRange(min: number, max: number) {
   return Math.random() * (max - min) + min
@@ -71,11 +71,11 @@ const triggerConfetti = () => {
       <span class="flex w-full flex-col gap-3 lg:flex-row">
         <Button :class="[hidden ? 'h-12 text-lg' : 'text-sm']">
           {{ $t('main.buttons.first') }}
-          <Start :size="16" color="#000" />
+          <Play :size="16" />
         </Button>
         <Button variant="ghost" :class="[hidden ? 'h-12 text-lg' : 'text-sm']">
           {{ $t('main.buttons.second') }}
-          <Stars :size="16" />
+          <Stars02 :size="16" />
         </Button>
       </span>
     </div>

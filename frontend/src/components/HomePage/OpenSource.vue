@@ -3,9 +3,9 @@ import { useFetch } from '@vueuse/core'
 import { openLink } from '@/utils'
 import { computed, ref } from 'vue'
 import { Button } from '@/components/ui/button'
-import Branch from '@/components/icons/Branch.vue'
+import { Star01, GitBranch01 } from 'untitledui-js/vue'
+
 import Github from '@/components/icons/Socials/Github.vue'
-import Star from '@/components/icons/Star.vue'
 const repoUrl = ref('https://api.github.com/repos/ValoryApp/Valory')
 const contributorsUrl = ref('https://api.github.com/repos/ValoryApp/Valory/contributors')
 
@@ -34,14 +34,14 @@ const contributorsCount = computed(() => contributorsData.value?.length ?? 0)
         @click="openLink('https://github.com/ValoryApp/Valory/forks')"
         class="gap-1 border border-white/10 bg-[#19191A] px-3 text-[#F2F2F2]"
       >
-        <Branch :size="22" />
+        <GitBranch01 :size="22" />
         {{ forksCount }}
       </Button>
       <Button
         @click="openLink('https://github.com/ValoryApp/Valory/stargazers')"
         class="gap-1 border border-white/10 bg-[#19191A] px-3 text-[#F2F2F2]"
       >
-        <Star color="#E3B341" :size="22" />
+        <Star01 color="#E3B341" :size="22" />
         {{ starsCount }}
       </Button>
     </div>

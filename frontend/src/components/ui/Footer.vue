@@ -7,7 +7,7 @@ import Valory from '@/components/icons/Valory.vue'
 import Twitch from '@/components/icons/Socials/Twitch.vue'
 import Discord from '@/components/icons/Socials/Discord.vue'
 import Telegram from '@/components/icons/Socials/Telegram.vue'
-import Donation from '@/components/icons/Donation.vue'
+import { Hearts } from 'untitledui-js/vue'
 </script>
 <template>
   <footer class="container m-auto mt-16 flex flex-col gap-10">
@@ -56,7 +56,7 @@ import Donation from '@/components/icons/Donation.vue'
             variant="ghost"
             class="h-fit w-fit cursor-pointer p-2"
           >
-            <Donation color="#FA4454" :size="20" />
+            <Hearts color="#FA4454" :size="20" />
           </Button>
         </div>
       </div>

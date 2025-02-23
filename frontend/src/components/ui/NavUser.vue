@@ -17,8 +17,7 @@ import {
   useSidebar,
 } from '@/components/ui/sidebar'
 import { ChevronsUpDown, LogOut } from 'lucide-vue-next'
-import Language from '@/components/icons/Language.vue'
-import Settings from '@/components/icons/General/Settings.vue'
+import { Settings02, Globe04 } from 'untitledui-js/vue'
 
 const props = defineProps<{
   user: {
@@ -70,11 +69,11 @@ const { isMobile } = useSidebar()
           <DropdownMenuSeparator />
           <DropdownMenuGroup>
             <DropdownMenuItem>
-              <Settings />
+              <Settings02 />
               Settings
             </DropdownMenuItem>
             <DropdownMenuItem>
-              <Language />
+              <Globe04 />
               Language
             </DropdownMenuItem>
           </DropdownMenuGroup>
