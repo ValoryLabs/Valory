@@ -8,7 +8,7 @@
 </a>
 <br/>
 
-Open source, powerful and customizable rank overlay tool for Valorant streamers 🎮✨<br/>
+<br/>Open source, powerful and customizable rank overlay tool for Valorant streamers 🎮✨<br/>
 
 **English** · [Русский](./README.ru.md) · [Feedback](https://github.com/ValoryLabs/Valory/issues/new)
 
