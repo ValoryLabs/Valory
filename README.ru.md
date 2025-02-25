@@ -6,6 +6,7 @@
       <img alt="Valory" src="/.media/logo_light.svg" width="350" height="70" style="max-width: 100%;">
     </picture>
 </a>
+<br/>
 
 Открытый, мощный и настраиваемый оверлей отображения рангов для стримеров Valorant 🎮✨<br/>
 

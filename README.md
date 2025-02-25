@@ -6,6 +6,7 @@
       <img alt="Valory" src="/.media/logo_light.svg" width="350" height="70" style="max-width: 100%;">
     </picture>
 </a>
+<br/>
 
 Open source, powerful and customizable rank overlay tool for Valorant streamers 🎮✨<br/>
 
