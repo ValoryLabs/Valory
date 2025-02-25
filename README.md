@@ -39,7 +39,7 @@ Join us on our social media channels:
 
 ## 💖 Donations
 
-If you'd like to support our project, you can make a donation through [DonationAlerts]((https://www.donationalerts.com/r/haxgun)).  
+If you'd like to support our project, you can make a donation through [DonationAlerts](https://www.donationalerts.com/r/haxgun).  
 Your support helps us develop Valory and improve its functionality!
 
 ## 🤝 Contributing 
