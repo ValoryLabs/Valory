@@ -34,12 +34,12 @@ const data = NAV_DATA
       </span>
       <SidebarTrigger />
     </SidebarHeader>
-    <SidebarContent class="relative text-lg">
-      <NavMain :items="data.navMain" />
-      <NavExtra class="absolute bottom-0" :items="data.navExtra" :buttons="data.buttons" />
+    <SidebarContent class="text-lg">
+      <NavMain title="Main" :items="data.navMain" />
+      <NavExtra title="Extra" :items="data.navExtra" :buttons="data.buttons" />
     </SidebarContent>
     <SidebarFooter>
-      <NavUser :user="data.user" />
+      <NavUser :user="data.user" :buttons="data.buttons" />
     </SidebarFooter>
     <SidebarRail />
   </Sidebar>

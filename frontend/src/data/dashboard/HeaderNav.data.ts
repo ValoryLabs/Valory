@@ -1,6 +1,7 @@
 import { BookClosed, Hearts, HelpCircle, HomeLine, LayersThree01, Link03 } from 'untitledui-js/vue'
 
 import Discord from '@/components/icons/Socials/Discord.vue'
+import Faceit from '@/components/icons/Socials/Faceit.vue'
 import Github from '@/components/icons/Socials/Github.vue'
 import Spotify from '@/components/icons/Socials/Spotify.vue'
 import Telegram from '@/components/icons/Socials/Telegram.vue'
@@ -33,6 +34,7 @@ interface User {
 }
 
 interface Button {
+  title: string
   icon: any
   url: string
 }
@@ -60,12 +62,17 @@ export const NAV_DATA: NavData = {
       title: 'Overlays',
       url: '#',
       icon: LayersThree01,
-      isActive: true,
+      isActive: false,
       items: [
         {
           title: 'Valorant',
           url: '#',
           icon: Valorant,
+        },
+        {
+          title: 'Faceit',
+          url: '#',
+          icon: Faceit,
         },
         {
           title: 'Spotify',
@@ -99,22 +106,27 @@ export const NAV_DATA: NavData = {
   ],
   buttons: [
     {
+      title: 'Github',
       icon: Github,
       url: 'https://github.com/ValoryApp/Valory',
     },
     {
+      title: 'Twitch',
       icon: Twitch,
       url: 'https://twitch.tv/MAGICXcmd',
     },
     {
+      title: 'Discord',
       icon: Discord,
       url: 'https://discord.gg/valory',
     },
     {
+      title: 'Telegram',
       icon: Telegram,
       url: 'https://t.me/magicxcmd',
     },
     {
+      title: 'Donate',
       icon: Hearts,
       url: 'https://www.donationalerts.com/r/haxgun',
     },

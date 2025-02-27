@@ -18,12 +18,17 @@ import {
   SidebarMenuItem,
   useSidebar,
 } from '@/components/ui/sidebar'
+import { openLink } from '@/utils'
 
 const props = defineProps<{
   user: {
     name: string
     avatar: string
   }
+  buttons?: {
+    icon: any
+    url: string
+  }[]
 }>()
 
 const { isMobile } = useSidebar()
@@ -31,6 +36,20 @@ const { isMobile } = useSidebar()
 
 <template>
   <SidebarMenu>
+    <div
+      v-if="buttons"
+      class="m-2 mb-0 flex max-w-[16rem] flex-row justify-between gap-3 group-data-[collapsible=icon]:m-0 group-data-[collapsible=icon]:mb-3 group-data-[collapsible=icon]:flex-col group-data-[collapsible=icon]:items-start"
+    >
+      <SidebarMenuButton
+        class="h-8 w-8 bg-white/5"
+        v-for="button in buttons"
+        :key="button.url"
+        @click="openLink(button.url)"
+        :tooltip="button.title"
+      >
+        <component :size="16" :is="button.icon" v-if="button.icon" />
+      </SidebarMenuButton>
+    </div>
     <SidebarMenuItem>
       <DropdownMenu>
         <DropdownMenuTrigger as-child>
