@@ -1,6 +1,6 @@
 <script setup lang="ts">
 import { ChevronsUpDown, LogOut } from 'lucide-vue-next'
-import { Globe04, Settings02 } from 'untitledui-js/vue'
+import { File05, Globe04, Lock01, Settings02 } from 'untitledui-js/vue'
 
 import { Avatar, AvatarFallback, AvatarImage } from '@/components/ui/avatar'
 import {
@@ -94,6 +94,17 @@ const { isMobile } = useSidebar()
             <DropdownMenuItem>
               <Globe04 />
               Language
+            </DropdownMenuItem>
+          </DropdownMenuGroup>
+          <DropdownMenuSeparator />
+          <DropdownMenuGroup>
+            <DropdownMenuItem>
+              <Lock01 />
+              Privacy Policy
+            </DropdownMenuItem>
+            <DropdownMenuItem>
+              <File05 />
+              Terms of Service
             </DropdownMenuItem>
           </DropdownMenuGroup>
           <DropdownMenuSeparator />

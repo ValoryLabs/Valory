@@ -23,6 +23,10 @@ export const FOOTER_NAV_PRODUCT_DATA: FooterNavData[] = [
         url: '/contact',
       },
       {
+        name: 'privacy',
+        url: '/privacy',
+      },
+      {
         name: 'terms',
         url: '/terms',
       },
