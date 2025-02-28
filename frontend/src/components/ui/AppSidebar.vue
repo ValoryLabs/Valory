@@ -3,14 +3,8 @@ import Valory from '@/components/icons/Valory.vue'
 import NavExtra from '@/components/ui/NavExtra.vue'
 import NavMain from '@/components/ui/NavMain.vue'
 import NavUser from '@/components/ui/NavUser.vue'
-import { type SidebarProps, SidebarTrigger } from '@/components/ui/sidebar'
-import {
-  Sidebar,
-  SidebarContent,
-  SidebarFooter,
-  SidebarHeader,
-  SidebarRail,
-} from '@/components/ui/sidebar'
+import { type SidebarProps } from '@/components/ui/sidebar'
+import { Sidebar, SidebarContent, SidebarFooter, SidebarHeader } from '@/components/ui/sidebar'
 import { NAV_DATA } from '@/data/dashboard/HeaderNav.data'
 
 const props = withDefaults(defineProps<SidebarProps>(), {
