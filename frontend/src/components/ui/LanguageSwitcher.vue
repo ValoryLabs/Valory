@@ -22,7 +22,11 @@ const currentLocale = useLocalStorage<string>('lang', 'en')
 <template>
   <DropdownMenu>
     <DropdownMenuTrigger as-child>
-      <Button aria-label="Language switcher" variant="ghost" class="w-9 px-2">
+      <Button
+        aria-label="Language switcher"
+        variant="ghost"
+        class="h-fit w-9 rounded-full border border-transparent p-2 hover:border-white/10 hover:bg-white/10"
+      >
         <Globe04 :size="16" />
       </Button>
     </DropdownMenuTrigger>

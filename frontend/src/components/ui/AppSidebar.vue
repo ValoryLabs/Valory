@@ -22,17 +22,11 @@ const data = NAV_DATA
 
 <template>
   <Sidebar v-bind="props">
-    <SidebarHeader
-      class="flex flex-row justify-between p-4 group-data-[collapsible=icon]:justify-center"
-    >
-      <span
-        @click="$router.push('/')"
-        class="flex w-fit cursor-pointer items-center gap-3 group-data-[collapsible=icon]:hidden"
-      >
+    <SidebarHeader class="flex flex-row justify-start p-4">
+      <span @click="$router.push('/')" class="flex w-fit cursor-pointer items-center gap-3">
         <Valory />
-        <span class="font-valory group-data-[collapsible=icon]:hidden">VALORY</span>
+        <span class="font-valory">VALORY</span>
       </span>
-      <SidebarTrigger />
     </SidebarHeader>
     <SidebarContent class="text-lg">
       <NavMain title="Main" :items="data.navMain" />
@@ -41,6 +35,5 @@ const data = NAV_DATA
     <SidebarFooter>
       <NavUser :user="data.user" :buttons="data.buttons" />
     </SidebarFooter>
-    <SidebarRail />
   </Sidebar>
 </template>

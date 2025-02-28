@@ -72,7 +72,7 @@ module.exports = {
             fontFeatureSettings: '"cv02","cv03","cv04","cv11"',
           },
         ],
-        mono: ["'Fira Code'"],
+        mono: ["'JetBrains Mono'"],
         valory: ["'Russo One'"],
       },
       borderRadius: {

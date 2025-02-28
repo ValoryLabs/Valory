@@ -12,5 +12,6 @@ useHead({
 <template>
   <SidebarProvider>
     <AppSidebar />
+    <div class="h-dvh w-dvw bg-[#0a0a0a]"></div>
   </SidebarProvider>
 </template>

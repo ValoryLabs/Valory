@@ -1,21 +1,9 @@
 <script lang="ts" setup>
-import { useFetch } from '@vueuse/core'
-import { GitBranch01, Star01 } from 'untitledui-js/vue'
-import { computed, ref } from 'vue'
+import { Star01 } from 'untitledui-js/vue'
 
 import Github from '@/components/icons/Socials/Github.vue'
 import { Button } from '@/components/ui/button'
 import { openLink } from '@/utils'
-
-const repoUrl = ref('https://api.github.com/repos/ValoryApp/Valory')
-const contributorsUrl = ref('https://api.github.com/repos/ValoryApp/Valory/contributors')
-
-const { data: repoData } = useFetch(repoUrl).get().json()
-const { data: contributorsData } = useFetch(contributorsUrl).json()
-
-const forksCount = computed(() => repoData.value?.forks_count ?? 0)
-const starsCount = computed(() => repoData.value?.stargazers_count ?? 0)
-const contributorsCount = computed(() => contributorsData.value?.length ?? 0)
 </script>
 
 <template>
@@ -28,19 +16,16 @@ const contributorsCount = computed(() => contributorsData.value?.length ?? 0)
       {{ $t('source.subtitle') }}
     </span>
     <div class="flex gap-2">
-      <Button @click="openLink('https://github.com/ValoryApp/Valory')" class="px-6"
-        >{{ $t('source.contribute') }} ({{ contributorsCount }})</Button
-      >
-      <Button variant="outline2" @click="openLink('https://github.com/ValoryApp/Valory/forks')">
-        <GitBranch01 :size="22" />
-        {{ forksCount }}
+      <Button @click="openLink('https://github.com/ValoryApp/Valory')" class="px-6">
+        <Github :size="16" color="#000" />
+        {{ $t('source.contribute') }}
       </Button>
       <Button
         variant="outline2"
         @click="openLink('https://github.com/ValoryApp/Valory/stargazers')"
       >
-        <Star01 color="#E3B341" :size="22" />
-        {{ starsCount }}
+        <Star01 color="#E3B341" :size="16" />
+        {{ $t('source.star') }}
       </Button>
     </div>
   </section>

@@ -45,8 +45,10 @@
   },
   "source": {
     "title": "Open Source",
+    "category": "Community-Driven Development",
     "subtitle": "Our application's source code is fully accessible on GitHub.\nWe welcome everyone to view, utilize, and contribute to its development.",
-    "contribute": "Contribute"
+    "contribute": "Contribute on Github",
+    "star": "Star the Project"
   },
   "footer": {
     "left": {

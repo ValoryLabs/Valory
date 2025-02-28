@@ -1,5 +1,6 @@
 <script setup lang="ts">
 import { ChevronsUpDown, LogOut } from 'lucide-vue-next'
+import { DropdownMenuPortal } from 'radix-vue'
 import { File05, Globe04, Lock01, Settings02 } from 'untitledui-js/vue'
 
 import { Avatar, AvatarFallback, AvatarImage } from '@/components/ui/avatar'
@@ -10,6 +11,9 @@ import {
   DropdownMenuItem,
   DropdownMenuLabel,
   DropdownMenuSeparator,
+  DropdownMenuSub,
+  DropdownMenuSubContent,
+  DropdownMenuSubTrigger,
   DropdownMenuTrigger,
 } from '@/components/ui/dropdown-menu'
 import {
@@ -91,10 +95,22 @@ const { isMobile } = useSidebar()
               <Settings02 />
               Settings
             </DropdownMenuItem>
-            <DropdownMenuItem>
-              <Globe04 />
-              Language
-            </DropdownMenuItem>
+            <DropdownMenuSub>
+              <DropdownMenuSubTrigger>
+                <Globe04 />
+                Language
+              </DropdownMenuSubTrigger>
+              <DropdownMenuPortal>
+                <DropdownMenuSubContent>
+                  <DropdownMenuItem>
+                    <span>Russian</span>
+                  </DropdownMenuItem>
+                  <DropdownMenuItem>
+                    <span>English</span>
+                  </DropdownMenuItem>
+                </DropdownMenuSubContent>
+              </DropdownMenuPortal>
+            </DropdownMenuSub>
           </DropdownMenuGroup>
           <DropdownMenuSeparator />
           <DropdownMenuGroup>
