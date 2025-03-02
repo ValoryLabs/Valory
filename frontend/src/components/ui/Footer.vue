@@ -1,5 +1,6 @@
 <script setup lang="ts">
 import { Hearts } from 'untitledui-js/vue'
+
 import Discord from '@/components/icons/Socials/Discord.vue'
 import Github from '@/components/icons/Socials/Github.vue'
 import Telegram from '@/components/icons/Socials/Telegram.vue'
@@ -10,7 +11,7 @@ import { FOOTER_NAV_PRODUCT_DATA } from '@/data/FooterNav.data'
 import { hidden, moveTo, openLink } from '@/utils'
 </script>
 <template>
-  <footer class="container m-auto flex flex-col gap-10 py-16">
+  <footer class="container m-auto mt-10 flex flex-col gap-10 py-16">
     <div class="flex justify-between gap-8">
       <div class="flex flex-col gap-4" :class="[hidden ? 'max-w-52' : '']">
         <div @click="moveTo('main')" class="flex flex-row items-center gap-3">
@@ -67,7 +68,14 @@ import { hidden, moveTo, openLink } from '@/utils'
             <Hearts color="#FA4454" :size="20" />
           </Button>
         </div>
-        <iframe src="https://status.valory.su/badge?theme=dark" width="250" height="30" frameborder="0" scrolling="no" style="color-scheme: normal"></iframe>
+        <iframe
+          src="https://status.valory.su/badge?theme=dark"
+          width="250"
+          height="30"
+          frameborder="0"
+          scrolling="no"
+          style="color-scheme: normal"
+        ></iframe>
       </div>
       <div
         class="flex"

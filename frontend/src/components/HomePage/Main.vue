@@ -2,6 +2,7 @@
 import { Stars02 } from 'untitledui-js/vue'
 
 import Discord from '@/components/icons/Socials/Discord.vue'
+import ParticlesBg from '@/components/ui/ParticlesBg.vue'
 import Sparkles from '@/components/ui/Sparkles.vue'
 import { Button } from '@/components/ui/button'
 import useConfetti from '@/composables/useConfetti'
@@ -37,58 +38,54 @@ const triggerConfetti = () => {
 </script>
 
 <template>
-  <section id="main" class="relative mt-[-5rem] flex h-dvh items-center justify-between">
-    <div
-      class="relative flex flex-col items-start justify-center gap-9"
-      :class="[hidden ? 'w-full' : '']"
-    >
+  <section id="main" class="relative mt-[-5rem] flex h-dvh items-center justify-center">
+    <div class="relative flex flex-col items-center justify-center gap-9">
       <Sparkles
         :colors="{ first: '#ffffff', second: '#ffffff' }"
         :sparkles-count="5"
-        :class="[hidden ? 'relative m-auto' : '']"
+        :class="hidden ? 'relative m-auto' : ''"
       >
         <span
           @click="triggerConfetti()"
-          class="flex cursor-pointer items-center gap-2 rounded-xl border border-white/10 bg-[#7289DA]/25 py-1 pl-2 pr-3 text-xs font-semibold drop-shadow-[0_0_20px_rgba(0,59,255,1)] transition duration-150 hover:bg-[#7289DA]/40"
+          class="flex cursor-pointer items-center gap-2 rounded-full border border-white/10 bg-[#7289DA]/25 py-1 pl-3 pr-4 text-sm font-semibold drop-shadow-[0_0_20px_rgba(0,59,255,1)] transition duration-150 hover:bg-[#7289DA]/40"
           v-wave
         >
-          <Discord :size="16" />
+          <Discord :size="20" />
           {{ $t('main.discord') }}
         </span>
       </Sparkles>
-      <span
-        class="whitespace-pre-line text-5xl font-black uppercase"
-        :class="[hidden ? 'w-full text-center' : '']"
-      >
+      <span class="whitespace-pre-line text-center text-5xl text-[100px] font-black uppercase">
         {{ $t('main.title') }}
       </span>
-      <span
-        class="whitespace-pre-line text-[#CECECE]"
-        :class="[hidden ? 'w-full text-center text-lg' : 'text-base']"
-      >
+      <span class="whitespace-pre-line text-center text-xl font-light">
         {{ $t('main.subtitle') }}
       </span>
-      <span class="flex w-full flex-col gap-3 lg:flex-row">
-        <Button @click="$router.push('/dashboard')" :class="[hidden ? 'h-12 text-lg' : 'text-sm']">
+      <span class="flex w-full flex-col items-center justify-center gap-3 lg:flex-row">
+        <Button @click="$router.push('/dashboard')" class="h-14 min-w-[240px] rounded-xl text-lg">
           {{ $t('main.buttons.first') }}
         </Button>
-        <Button variant="ghost" :class="[hidden ? 'h-12 text-lg' : 'text-sm']">
+        <Button variant="ghost" class="h-14 min-w-[240px] rounded-xl text-lg">
           {{ $t('main.buttons.second') }}
           <Stars02 :size="16" />
         </Button>
       </span>
     </div>
     <div
-      v-if="!hidden"
-      class="before:pointer-events-none before:absolute before:bottom-[18rem] before:right-[-30px] before:-z-10 before:h-[400px] before:w-[400px] before:rounded-full before:bg-[#A80026]/40 before:blur-[200px] before:content-['']"
-    >
-      <img
-        src="/images/ValoryLogo3D.webp"
-        height="321"
-        width="314"
-        alt="Valory 3D"
-        fetchpriority="high"
-      />
-    </div>
+      class="absolute -bottom-96 -z-10 h-[90dvh] w-[80dvw] rounded-full bg-[#0046ff]/50 blur-[160px]"
+    ></div>
+    <div
+      class="absolute -bottom-96 -z-10 h-[500px] w-full rounded-full bg-[#2e3e75] blur-[160px]"
+    ></div>
+    <div
+      class="absolute -bottom-96 -z-10 h-[300px] w-[70dvw] rounded-full bg-[#f2f2f2]/20 blur-[160px]"
+    ></div>
+    <ParticlesBg
+      class="absolute inset-0 -z-10"
+      :quantity="100"
+      :ease="100"
+      color="#FFF"
+      :staticity="10"
+      refresh
+    />
   </section>
 </template>
