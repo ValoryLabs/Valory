@@ -1,27 +1,14 @@
-<script setup lang="ts">
-import { useFetch } from '@vueuse/core'
-import { computed, ref } from 'vue'
-
-import Github from '@/components/icons/Socials/Github.vue'
-import Twitch from '@/components/icons/Socials/Twitch.vue'
-import Valory from '@/components/icons/Valory.vue'
-import LanguageSwitcher from '@/components/ui/LanguageSwitcher.vue'
-import { Button } from '@/components/ui/button'
-import { NAV_DATA } from '@/data/HeaderNav.data'
-import router from '@/router'
-import { hidden, openLink } from '@/utils'
-import { moveTo } from '@/utils'
-
-const repoUrl = ref('https://api.github.com/repos/ValoryApp/Valory')
-
-const { data: repoData } = useFetch(repoUrl).get().json()
-
-const starsCount = computed(() => repoData.value?.stargazers_count ?? 0)
-</script>
-
 <template>
-  <header class="sticky top-0 z-10 flex h-20 justify-center bg-black/30 text-sm backdrop-blur-sm">
-    <div class="container m-auto flex items-center justify-between">
+  <header
+    :class="[
+      'sticky z-10 m-auto flex h-16 w-fit justify-center rounded-full bg-black/30 px-3 text-sm backdrop-blur-sm transition-all duration-300',
+      showHeader ? 'top-6' : 'top-[-600px]',
+    ]"
+  >
+    <div class="container m-auto flex items-center justify-between gap-48">
+      <div class="logo">
+        <Valory :size="30" />
+      </div>
       <div class="left">
         <ul v-if="!hidden" class="flex items-center justify-between gap-6">
           <li
@@ -33,9 +20,6 @@ const starsCount = computed(() => repoData.value?.stargazers_count ?? 0)
             {{ $t(`nav.${nav.point}`) }}
           </li>
         </ul>
-      </div>
-      <div class="logo absolute" :class="[hidden ? '' : 'left-1/2']">
-        <Valory :size="30" />
       </div>
       <div class="right flex flex-row items-center gap-2">
         <Button
@@ -54,3 +38,45 @@ const starsCount = computed(() => repoData.value?.stargazers_count ?? 0)
     </div>
   </header>
 </template>
+
+<script setup lang="ts">
+import { useFetch } from '@vueuse/core'
+import { computed, onMounted, onUnmounted, ref } from 'vue'
+
+import Github from '@/components/icons/Socials/Github.vue'
+import Twitch from '@/components/icons/Socials/Twitch.vue'
+import Valory from '@/components/icons/Valory.vue'
+import LanguageSwitcher from '@/components/ui/LanguageSwitcher.vue'
+import { Button } from '@/components/ui/button'
+import { NAV_DATA } from '@/data/HeaderNav.data'
+import router from '@/router'
+import { hidden, openLink } from '@/utils'
+import { moveTo } from '@/utils'
+
+const repoUrl = ref('https://api.github.com/repos/ValoryApp/Valory')
+
+const { data: repoData } = useFetch(repoUrl).get().json()
+
+const starsCount = computed(() => repoData.value?.stargazers_count ?? 0)
+
+const showHeader = ref(true)
+let lastScrollPosition = 0
+
+const handleScroll = () => {
+  const currentScrollPosition = window.scrollY
+  if (currentScrollPosition > lastScrollPosition) {
+    showHeader.value = false
+  } else {
+    showHeader.value = true
+  }
+  lastScrollPosition = currentScrollPosition
+}
+
+onMounted(() => {
+  window.addEventListener('scroll', handleScroll)
+})
+
+onUnmounted(() => {
+  window.removeEventListener('scroll', handleScroll)
+})
+</script>
