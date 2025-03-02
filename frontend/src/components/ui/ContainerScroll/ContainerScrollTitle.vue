@@ -1,5 +1,8 @@
 <template>
-  <div :style="{ transform: `translateY(${translate}px)` }" class="mx-auto max-w-5xl text-center">
+  <div
+    :style="{ transform: `translateY(${props.translate}px)` }"
+    class="mx-auto max-w-5xl text-center"
+  >
     <slot></slot>
   </div>
 </template>
