@@ -32,7 +32,7 @@ import { PREVIEW_TABS_DATA } from '@/data/PreviewTabs.data'
             >
               <img
                 :src="tab.content"
-                class="mx-auto h-full rounded-2xl object-cover object-left-top"
+                class="mx-auto h-full object-cover object-left-top"
                 alt="hero"
                 height="3104"
                 width="5480"
