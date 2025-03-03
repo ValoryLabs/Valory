@@ -16,6 +16,13 @@
       "second": "How does it work?"
     }
   },
+  "previews": {
+    "home": "Home",
+    "valorant": "Valorant",
+    "faceit": "Faceit",
+    "music": "Music",
+    "bot": "Twitch bot"
+  },
   "features": {
     "category": "Features",
     "title": "Everything You Need to Elevate Your Stream",

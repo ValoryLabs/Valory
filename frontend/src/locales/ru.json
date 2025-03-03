@@ -16,6 +16,13 @@
       "second": "Как это работает?"
     }
   },
+  "previews": {
+    "home": "Домашняя",
+    "valorant": "Valorant",
+    "faceit": "Faceit",
+    "music": "Музыка",
+    "bot": "Twitch бот"
+  },
   "features": {
     "category": "Особенности",
     "title": "Все, что Вам нужно для улучшения Вашего стрима",
