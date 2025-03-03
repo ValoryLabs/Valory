@@ -4,8 +4,11 @@ import ContainerScroll from '@/components/ui/ContainerScroll/ContainerScroll.vue
 
 <template>
   <section>
-    <div class="flex flex-col">
+    <div class="mb-16 flex flex-col">
       <ContainerScroll>
+        <template #title>
+          <h1 class="text-6xl font-bold">Какой-то текст</h1>
+        </template>
         <template #card>
           <img
             src="/images/linear.webp"

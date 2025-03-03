@@ -9,7 +9,7 @@ import { openLink } from '@/utils'
 <template>
   <section id="source" class="flex flex-col items-center justify-center gap-9 py-16">
     <Github :size="60" class="drop-shadow-[0_0_20px_rgba(255,255,255,0.4)]" />
-    <span class="text-center text-6xl font-extrabold drop-shadow-[0_0_20px_rgba(255,255,255,0.4)]">
+    <span class="text-center text-5xl font-extrabold drop-shadow-[0_0_20px_rgba(255,255,255,0.4)]">
       {{ $t('source.title') }}
     </span>
     <span class="whitespace-pre-line text-center text-lg">

@@ -38,7 +38,7 @@ const triggerConfetti = () => {
 </script>
 
 <template>
-  <section id="main" class="relative mt-[-5rem] flex h-dvh items-center justify-center">
+  <section id="main" class="relative flex h-dvh items-center justify-center">
     <div class="relative flex flex-col items-center justify-center gap-9">
       <Sparkles
         :colors="{ first: '#ffffff', second: '#ffffff' }"
@@ -54,7 +54,7 @@ const triggerConfetti = () => {
           {{ $t('main.discord') }}
         </span>
       </Sparkles>
-      <span class="whitespace-pre-line text-center text-5xl text-[100px] font-black uppercase">
+      <span class="whitespace-pre-line text-center text-5xl text-[90px] font-black uppercase">
         {{ $t('main.title') }}
       </span>
       <span class="whitespace-pre-line text-center text-xl font-light">
@@ -64,20 +64,20 @@ const triggerConfetti = () => {
         <Button @click="$router.push('/dashboard')" class="h-14 min-w-[240px] rounded-xl text-lg">
           {{ $t('main.buttons.first') }}
         </Button>
-        <Button variant="ghost" class="h-14 min-w-[240px] rounded-xl text-lg">
+        <Button variant="alternative" class="h-14 min-w-[240px] rounded-xl text-lg">
           {{ $t('main.buttons.second') }}
           <Stars02 :size="16" />
         </Button>
       </span>
     </div>
     <div
-      class="absolute -bottom-96 -z-10 h-[90dvh] w-[80dvw] rounded-full bg-[#0046ff]/50 blur-[160px]"
+      class="animate-fade absolute -bottom-96 -z-10 h-[90dvh] w-[80dvw] rounded-full bg-[#0046ff] opacity-50 blur-[160px]"
     ></div>
     <div
-      class="absolute -bottom-96 -z-10 h-[500px] w-full rounded-full bg-[#2e3e75] blur-[160px]"
+      class="animate-fade-2 absolute -bottom-96 -z-10 h-[500px] w-full rounded-full bg-[#2e3e75] opacity-50 blur-[160px]"
     ></div>
     <div
-      class="absolute -bottom-96 -z-10 h-[300px] w-[70dvw] rounded-full bg-[#f2f2f2]/20 blur-[160px]"
+      class="animate-fade-2 absolute -bottom-96 -z-10 h-[300px] w-[70dvw] rounded-full bg-[#f2f2f2]/20 blur-[160px]"
     ></div>
     <ParticlesBg
       class="absolute inset-0 -z-10"
@@ -89,3 +89,40 @@ const triggerConfetti = () => {
     />
   </section>
 </template>
+
+<style scoped>
+.animate-fade {
+  animation: fade 10s infinite;
+}
+
+.animate-fade-2 {
+  animation: fade-2 5s infinite;
+}
+
+@keyframes fade {
+  0% {
+    --tw-blur: blur(160px);
+    opacity: 0.6;
+  }
+  50% {
+    --tw-blur: blur(100px);
+    opacity: 0.4;
+  }
+  100% {
+    --tw-blur: blur(160px);
+    opacity: 0.6;
+  }
+}
+
+@keyframes fade-2 {
+  0% {
+    opacity: 0.5;
+  }
+  50% {
+    opacity: 0.8;
+  }
+  100% {
+    opacity: 0.5;
+  }
+}
+</style>

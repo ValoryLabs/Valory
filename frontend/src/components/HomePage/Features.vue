@@ -3,9 +3,9 @@ import { hidden } from '@/utils.js'
 </script>
 
 <template>
-  <section id="features" class="container flex flex-col items-center justify-center gap-10">
+  <section id="features" class="container mb-20 flex flex-col items-center justify-center gap-12">
     <div class="flex flex-col items-center gap-6">
-      <span class="inline-block text-xs font-bold uppercase text-[#5AB2F7]">
+      <span class="inline-block text-sm font-bold uppercase text-[#5AB2F7]">
         {{ $t('features.category') }}
       </span>
       <span class="text-center text-2xl font-bold uppercase">

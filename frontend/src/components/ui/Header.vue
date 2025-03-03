@@ -1,15 +1,17 @@
 <template>
   <header
     :class="[
-      'sticky z-10 m-auto flex h-16 w-fit justify-center rounded-full bg-black/30 px-3 text-sm backdrop-blur-sm transition-all duration-300',
+      'fixed left-0 right-0 z-10 flex h-16 w-full justify-center transition-all duration-700',
       showHeader ? 'top-6' : 'top-[-600px]',
     ]"
   >
-    <div class="container m-auto flex items-center justify-between gap-48">
-      <div class="logo">
-        <Valory :size="30" />
-      </div>
-      <div class="left">
+    <div
+      class="container flex max-w-[60dvw] items-center justify-between gap-48 rounded-full border border-white/10 bg-black/30 px-5 py-1 text-sm backdrop-blur-sm"
+    >
+      <div class="left flex flex-row gap-8">
+        <div class="logo">
+          <Valory :size="30" />
+        </div>
         <ul v-if="!hidden" class="flex items-center justify-between gap-6">
           <li
             v-for="nav in NAV_DATA"
@@ -21,7 +23,7 @@
           </li>
         </ul>
       </div>
-      <div class="right flex flex-row items-center gap-2">
+      <div class="right flex flex-row items-center gap-1">
         <Button
           class="rounded-full border border-transparent bg-transparent text-white opacity-50 transition hover:border-white/10 hover:bg-white/10 hover:opacity-100"
           @click="openLink('https://github.com/ValoryApp/Valory')"
@@ -30,7 +32,7 @@
           {{ starsCount }}
         </Button>
         <LanguageSwitcher />
-        <Button class="text-sm" size="sm" @click="router.push('/dashboard')">
+        <Button class="rounded-full text-sm" @click="router.push('/dashboard')">
           {{ $t('nav.login') }}
           <Twitch :size="16" color="#000" />
         </Button>
