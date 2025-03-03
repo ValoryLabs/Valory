@@ -13,7 +13,9 @@ import InteractiveHoverButton from '@/components/ui/InteractiveHoverButton.vue'
         <br />of their broadcasts with using our tools.
       </span>
       <InteractiveHoverButton text="Let's start!" size="lg" class="w-[11rem] text-base" />
-      <div class="bg-gradient absolute left-0 rounded-full p-64 blur-[160px]"></div>
+      <div
+        class="bg-gradient absolute -top-96 left-0 right-0 -z-10 rounded-full p-52 blur-[100px]"
+      ></div>
     </div>
     <div
       class="bg-white/2 absolute -bottom-6 w-[80%] rounded-2xl border border-white/10 px-12 py-5 backdrop-blur-[8px]"
