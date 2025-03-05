@@ -1,5 +1,6 @@
 <script lang="ts" setup>
 import InteractiveHoverButton from '@/components/ui/InteractiveHoverButton.vue'
+import router from '@/router'
 </script>
 
 <template>
@@ -11,7 +12,12 @@ import InteractiveHoverButton from '@/components/ui/InteractiveHoverButton.vue'
       <span class="whitespace-pre-line text-center text-xl font-normal">{{
         $t('freeuse.description')
       }}</span>
-      <InteractiveHoverButton :text="$t('freeuse.button')" size="lg" class="w-[11rem] text-base" />
+      <InteractiveHoverButton
+        @click="router.push('/dashboard')"
+        :text="$t('freeuse.button')"
+        size="lg"
+        class="w-[11rem] text-base"
+      />
       <div
         class="bg-gradient absolute -top-96 left-0 right-0 -z-10 rounded-full p-52 blur-[100px]"
       ></div>
