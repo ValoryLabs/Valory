@@ -8,8 +8,4 @@ useHead({
 })
 </script>
 
-<template>
-  <Dashboard>
-    <RouterView />
-  </Dashboard>
-</template>
+<template></template>
