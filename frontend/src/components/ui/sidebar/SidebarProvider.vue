@@ -84,10 +84,7 @@ provideSidebarContext({
         '--sidebar-width-icon': SIDEBAR_WIDTH_ICON,
       }"
       :class="
-        cn(
-          'group/sidebar-wrapper flex min-h-svh w-full has-[[data-variant=inset]]:bg-sidebar',
-          props.class,
-        )
+        cn('group/sidebar-wrapper flex w-full has-[[data-variant=inset]]:bg-sidebar', props.class)
       "
       v-bind="$attrs"
     >

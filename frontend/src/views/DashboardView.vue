@@ -1,11 +1,11 @@
 <script setup lang="ts">
 import { useHead } from '@unhead/vue'
 
-import Dashboard from '@/layouts/Dashboard.vue'
-
 useHead({
   title: 'Dashboard',
 })
 </script>
 
-<template></template>
+<template>
+  <h1>Hello world!</h1>
+</template>

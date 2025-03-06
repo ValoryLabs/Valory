@@ -9,7 +9,7 @@ import { SidebarProvider } from '@/components/ui/sidebar'
     <Header />
     <SidebarProvider class="mt-14">
       <AppSidebar />
-      <div class="h-full w-dvw">
+      <div class="w-dvw">
         <RouterView />
       </div>
     </SidebarProvider>
