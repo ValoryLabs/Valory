@@ -1,5 +1,9 @@
 <script setup lang="ts">
 import { useHead, useSeoMeta } from '@unhead/vue'
+import { ref } from 'vue'
+import { useRouter } from 'vue-router'
+
+import Valory from '@/components/icons/Valory.vue'
 
 const titleMain = 'VALORY'
 const metaImg = 'meta.webp'
@@ -35,8 +39,29 @@ useSeoMeta({
   author: 'MAGICX, misha@valory.su',
   keywords: metaKeywords,
 })
+
+const isRouterReady = ref(false)
+const router = useRouter()
+router.isReady().finally(() => (isRouterReady.value = true))
 </script>
 
 <template>
-  <RouterView />
+  <Transition>
+    <div v-if="!isRouterReady" class="z-9999 flex h-[100dvh] items-center justify-center">
+      <Valory :size="32" />
+    </div>
+    <RouterView v-else />
+  </Transition>
 </template>
+
+<style scoped>
+.v-enter-active,
+.v-leave-active {
+  transition: opacity 0.5s ease;
+}
+
+.v-enter-from,
+.v-leave-to {
+  opacity: 0;
+}
+</style>
