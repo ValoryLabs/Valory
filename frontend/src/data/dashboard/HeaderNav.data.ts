@@ -2,7 +2,6 @@ import {
   BookClosed,
   Hearts,
   HelpCircle,
-  HomeLine,
   LayersThree01,
   Link03,
   MusicNote01,
