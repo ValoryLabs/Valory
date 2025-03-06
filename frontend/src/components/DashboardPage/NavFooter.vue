@@ -23,7 +23,7 @@ const props = defineProps<{
         @click="openLink(button.url)"
         :tooltip="button.title"
       >
-        <component :size="16" :is="button.icon" v-if="button.icon" />
+        <component :size="16" :is="button.icon" color="currentColor" v-if="button.icon" />
       </SidebarMenuButton>
     </div>
   </SidebarMenu>
