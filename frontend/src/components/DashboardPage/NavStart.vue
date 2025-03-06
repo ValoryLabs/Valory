@@ -1,4 +1,6 @@
 <script setup lang="ts">
+import { Home02 } from 'untitledui-js/vue'
+
 import {
   SidebarGroup,
   SidebarGroupLabel,
@@ -9,23 +11,18 @@ import {
 
 defineProps<{
   title?: string
-  items: {
-    title: string
-    url: string
-    icon?: any
-  }[]
 }>()
 </script>
 
 <template>
   <SidebarGroup class="overflow-x-hidden">
     <SidebarGroupLabel v-if="title">{{ title }}</SidebarGroupLabel>
-    <SidebarMenu v-for="item in items" :key="item.title">
+    <SidebarMenu>
       <SidebarMenuItem>
-        <SidebarMenuButton :tooltip="item.title" as-child>
-          <a href="/">
-            <component :is="item.icon" v-if="item.icon" />
-            <span>{{ item.title }}</span>
+        <SidebarMenuButton as-child>
+          <a href="#">
+            <component :is="Home02" />
+            <span>Introduction</span>
           </a>
         </SidebarMenuButton>
       </SidebarMenuItem>

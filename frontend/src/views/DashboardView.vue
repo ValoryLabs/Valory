@@ -1,7 +1,8 @@
 <script setup lang="ts">
 import { useHead } from '@unhead/vue'
 
-import AppSidebar from '@/components/ui/AppSidebar.vue'
+import AppSidebar from '@/components/DashboardPage/AppSidebar.vue'
+import Header from '@/components/DashboardPage/Header.vue'
 import { SidebarProvider } from '@/components/ui/sidebar'
 
 useHead({
@@ -10,8 +11,11 @@ useHead({
 </script>
 
 <template>
-  <SidebarProvider>
-    <AppSidebar />
-    <div class="h-dvh w-dvw bg-[#0a0a0a]"></div>
-  </SidebarProvider>
+  <div class="flex flex-col">
+    <Header />
+    <SidebarProvider class="mt-14">
+      <AppSidebar />
+      <div class="h-dvh w-dvw"></div>
+    </SidebarProvider>
+  </div>
 </template>

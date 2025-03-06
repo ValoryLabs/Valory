@@ -9,7 +9,7 @@ const props = defineProps<{
 </script>
 
 <template>
-  <ul data-sidebar="menu" :class="cn('flex w-full min-w-0 flex-col gap-2', props.class)">
+  <ul data-sidebar="menu" :class="cn('flex w-full min-w-0 flex-col', props.class)">
     <slot />
   </ul>
 </template>

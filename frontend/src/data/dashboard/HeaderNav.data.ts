@@ -61,11 +61,6 @@ export const NAV_DATA: NavData = {
   },
   navMain: [
     {
-      title: 'Home',
-      url: '#',
-      icon: HomeLine,
-    },
-    {
       title: 'Overlays',
       url: '#',
       icon: LayersThree01,
