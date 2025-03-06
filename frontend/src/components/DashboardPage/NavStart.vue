@@ -19,7 +19,7 @@ defineProps<{
     <SidebarGroupLabel v-if="title">{{ title }}</SidebarGroupLabel>
     <SidebarMenu>
       <SidebarMenuItem>
-        <SidebarMenuButton as-child>
+        <SidebarMenuButton as-child isActive>
           <a href="#">
             <component :is="Home02" />
             <span>Introduction</span>
