@@ -4,6 +4,8 @@ import {
   HelpCircle,
   LayersThree01,
   Link03,
+  MessageChatCircle,
+  MessageSmileSquare,
   MusicNote01,
 } from 'untitledui-js/vue'
 
@@ -76,6 +78,11 @@ export const NAV_DATA: NavData = {
           icon: Faceit,
         },
         {
+          title: 'Chat',
+          url: '#',
+          icon: MessageChatCircle,
+        },
+        {
           title: 'Music',
           url: '#',
           icon: MusicNote01,
@@ -83,9 +90,14 @@ export const NAV_DATA: NavData = {
       ],
     },
     {
-      title: 'Bot',
+      title: 'Twitch Bot',
       url: '#',
       icon: Twitch,
+    },
+    {
+      title: 'Notification Bot',
+      url: '#',
+      icon: MessageSmileSquare,
     },
   ],
   navExtra: [
