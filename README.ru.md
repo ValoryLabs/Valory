@@ -51,7 +51,7 @@
 2. **Предложите функции**: Создайте [pull request](https://github.com/ValoryLabs/Valory/pulls).  
 3. **Поделитесь любовью**: Поставьте звезду репозиторию и расскажите о нас! 🌟
 
-<center>
+<div align="center">
     <a href="https://github.com/ValoryLabs/Valory/graphs/contributors" target="_blank">
       <table>
         <tr>
@@ -61,7 +61,7 @@
         </tr>
       </table>
     </a>
-</center>
+</div>
 
 ## 📈 Статистика 
 ![Alt](https://repobeats.axiom.co/api/embed/e71816a7a6515ea08c255c65b6cc812da80d4796.svg "Repobeats analytics image")

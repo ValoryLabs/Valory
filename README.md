@@ -50,7 +50,7 @@ We welcome contributions! Here’s how to get involved:
 2. **Submit Features**: Create a [pull request](https://github.com/ValoryLabs/Valory/pulls).  
 3. **Share the Love**: Star the repo and spread the word! 🌟
 
-<center>
+<div align="center">
     <a href="https://github.com/ValoryLabs/Valory/graphs/contributors" target="_blank">
       <table>
         <tr>
@@ -60,7 +60,7 @@ We welcome contributions! Here’s how to get involved:
         </tr>
       </table>
     </a>
-</center>
+</div>
 
 ## 📈 Stats 
 ![Alt](https://repobeats.axiom.co/api/embed/e71816a7a6515ea08c255c65b6cc812da80d4796.svg "Repobeats analytics image")
