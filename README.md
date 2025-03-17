@@ -13,7 +13,6 @@
 **English** · [Русский](./README.ru.md) · [Feedback](https://github.com/ValoryLabs/Valory/issues/new)
 
 [![Better Stack Badge](https://uptime.betterstack.com/status-badges/v1/monitor/1suhk.svg)](https://uptime.betterstack.com/?utm_source=status_badge)
-![Github Actions](https://github.com/ValoryLabs/Valory/actions/workflows/deploy.yml/badge.svg?branch=v2_new_frontend)
 [![GitHub License](https://img.shields.io/github/license/ValoryLabs/Valory?color=green)](https://github.com/ValoryLabs/Valory/blob/main/LICENSE)
 [![Stars](https://img.shields.io/github/stars/ValoryLabs/Valory?style=flat&color=green)](https://github.com/ValoryLabs/Valory/stargazers)
 [![Forks](https://img.shields.io/github/forks/ValoryLabs/Valory?style=flat&color=green)](https://github.com/ValoryLabs/Valory/forks)
@@ -22,13 +21,13 @@
 
 </div>
 
-## 🚀 Features 
+## 🚀 Features
 
-- 📊 **Real-Time Stats**: Get up-to-date game stats instantly.  
-- 🎨 **Sleek Design**: Modern visuals that fit any stream.   
-- 🛠️ **Fully Customizable**: Tailor colors, layouts, and more to your liking.   
-- ⚙️ **Easy Setup**: Minimal effort required, works out of the box.   
-- 🎥 **Stream Software Integration**: Compatible with OBS, Streamlabs, and more!  
+- 📊 **Real-Time Stats**: Get up-to-date game stats instantly.
+- 🎨 **Sleek Design**: Modern visuals that fit any stream.
+- 🛠️ **Fully Customizable**: Tailor colors, layouts, and more to your liking.
+- ⚙️ **Easy Setup**: Minimal effort required, works out of the box.
+- 🎥 **Stream Software Integration**: Compatible with OBS, Streamlabs, and more!
 
 ## 🌐 Social Media
 
@@ -39,15 +38,15 @@ Join us on our social media channels:
 
 ## 💖 Donations
 
-If you'd like to support our project, you can make a donation through [DonationAlerts](https://www.donationalerts.com/r/haxgun).  
+If you'd like to support our project, you can make a donation through [DonationAlerts](https://www.donationalerts.com/r/haxgun).
 Your support helps us develop Valory and improve its functionality!
 
-## 🤝 Contributing 
+## 🤝 Contributing
 
 We welcome contributions! Here’s how to get involved:
 
-1. **Report Bugs**: Open an issue [here](https://github.com/ValoryLabs/Valory/issues).  
-2. **Submit Features**: Create a [pull request](https://github.com/ValoryLabs/Valory/pulls).  
+1. **Report Bugs**: Open an issue [here](https://github.com/ValoryLabs/Valory/issues).
+2. **Submit Features**: Create a [pull request](https://github.com/ValoryLabs/Valory/pulls).
 3. **Share the Love**: Star the repo and spread the word! 🌟
 
 <div align="center">
@@ -62,10 +61,10 @@ We welcome contributions! Here’s how to get involved:
     </a>
 </div>
 
-## 📈 Stats 
+## 📈 Stats
 ![Alt](https://repobeats.axiom.co/api/embed/e71816a7a6515ea08c255c65b6cc812da80d4796.svg "Repobeats analytics image")
 
-## 📜 License   
+## 📜 License
 Licensed under the **[MIT License](https://github.com/ValoryLabs/Valory/blob/main/LICENSE)**
 
 ---

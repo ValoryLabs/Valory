@@ -13,7 +13,6 @@
 [English](./README.md) · **Русский** · [Обратная связь](https://github.com/ValoryLabs/Valory/issues/new)
 
 [![Better Stack Badge](https://uptime.betterstack.com/status-badges/v1/monitor/1suhk.svg)](https://uptime.betterstack.com/?utm_source=status_badge)
-![Github Actions](https://github.com/ValoryLabs/Valory/actions/workflows/deploy.yml/badge.svg?branch=v2_new_frontend)
 [![GitHub License](https://img.shields.io/github/license/ValoryLabs/Valory?color=green)](https://github.com/ValoryLabs/Valory/blob/main/LICENSE)
 [![Stars](https://img.shields.io/github/stars/ValoryLabs/Valory?style=flat&color=green)](https://github.com/ValoryLabs/Valory/stargazers)
 [![Forks](https://img.shields.io/github/forks/ValoryLabs/Valory?style=flat&color=green)](https://github.com/ValoryLabs/Valory/forks)
@@ -22,13 +21,13 @@
 
 </div>
 
-## 🚀 Функции 
+## 🚀 Функции
 
-- 📊 **Статистика в реальном времени**: Получайте актуальные игровые данные мгновенно.  
-- 🎨 **Эстетичный дизайн**: Современные визуальные элементы, которые подойдут любому стриму.  
-- 🛠️ **Полная настройка**: Настройте цвета, макеты и многое другое по своему вкусу.  
-- ⚙️ **Легкая установка**: Минимум усилий, работает сразу после установки.  
-- 🎥 **Интеграция с программным обеспечением для стриминга**: Совместимо с OBS, Streamlabs и многими другими!  
+- 📊 **Статистика в реальном времени**: Получайте актуальные игровые данные мгновенно.
+- 🎨 **Эстетичный дизайн**: Современные визуальные элементы, которые подойдут любому стриму.
+- 🛠️ **Полная настройка**: Настройте цвета, макеты и многое другое по своему вкусу.
+- ⚙️ **Легкая установка**: Минимум усилий, работает сразу после установки.
+- 🎥 **Интеграция с программным обеспечением для стриминга**: Совместимо с OBS, Streamlabs и многими другими!
 
 ## 🌐 Социальные сети
 
@@ -39,16 +38,16 @@
 
 ## 💖 Пожертвования
 
-Если вы хотите поддержать наш проект, вы можете сделать пожертвование через [DonationAlerts](https://www.donationalerts.com/r/haxgun).  
+Если вы хотите поддержать наш проект, вы можете сделать пожертвование через [DonationAlerts](https://www.donationalerts.com/r/haxgun).
 Ваша поддержка поможет нам развивать Valory и улучшать его функциональность!
 
 
-## 🤝 Участие в разработке 
+## 🤝 Участие в разработке
 
 Мы приветствуем любое участие в разработке проекта! Вот как можно присоединиться:
 
-1. **Сообщите о багах**: Откройте проблему [здесь](https://github.com/ValoryLabs/Valory/issues).  
-2. **Предложите функции**: Создайте [pull request](https://github.com/ValoryLabs/Valory/pulls).  
+1. **Сообщите о багах**: Откройте проблему [здесь](https://github.com/ValoryLabs/Valory/issues).
+2. **Предложите функции**: Создайте [pull request](https://github.com/ValoryLabs/Valory/pulls).
 3. **Поделитесь любовью**: Поставьте звезду репозиторию и расскажите о нас! 🌟
 
 <div align="center">
@@ -63,10 +62,10 @@
     </a>
 </div>
 
-## 📈 Статистика 
+## 📈 Статистика
 ![Alt](https://repobeats.axiom.co/api/embed/e71816a7a6515ea08c255c65b6cc812da80d4796.svg "Repobeats analytics image")
 
-## 📜 Лицензия   
+## 📜 Лицензия
 Лицензировано под **[MIT License](https://github.com/ValoryLabs/Valory/blob/main/LICENSE)**
 
 ---
