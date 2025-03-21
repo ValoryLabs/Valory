@@ -120,12 +120,12 @@ module.exports = {
           to: { height: 0 },
         },
         'collapsible-down': {
-          from: { height: 0 },
-          to: { height: 'var(--radix-collapsible-content-height)' },
+          from: { height: 0, opacity: 0 },
+          to: { height: 'var(--radix-collapsible-content-height)', opacity: 1 },
         },
         'collapsible-up': {
-          from: { height: 'var(--radix-collapsible-content-height)' },
-          to: { height: 0 },
+          from: { height: 'var(--radix-collapsible-content-height)', opacity: 1 },
+          to: { height: 0, opacity: 0 },
         },
       },
       animation: {
@@ -138,8 +138,8 @@ module.exports = {
         fadeOut: 'fadeOut 0.2s ease-out',
         'collapse-down': 'collapse-down 0.1s ease-out',
         'collapse-up': 'collapse-up 0.1s ease-out',
-        'collapsible-down': 'collapsible-down 0.1s ease-in-out',
-        'collapsible-up': 'collapsible-up 0.1s ease-in-out',
+        'collapsible-down': 'collapsible-down 0.4s ease-in-out',
+        'collapsible-up': 'collapsible-up 0.4s ease-in-out',
       },
     },
   },
