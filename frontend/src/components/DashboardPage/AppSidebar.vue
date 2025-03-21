@@ -15,7 +15,7 @@ const data = NAV_DATA
 </script>
 
 <template>
-  <Sidebar v-bind="props">
+  <Sidebar v-bind="props" variant="inset">
     <SidebarContent class="text-lg">
       <NavStart title="Get started" />
       <NavMain title="Features" :items="data.navMain" />
