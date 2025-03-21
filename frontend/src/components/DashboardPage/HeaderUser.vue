@@ -1,7 +1,6 @@
 <script setup lang="ts">
 import { ChevronsUpDown, LogOut } from 'lucide-vue-next'
-import { DropdownMenuPortal } from 'radix-vue'
-import { File05, Globe04, Lock01, Settings02 } from 'untitledui-js/vue'
+import { File05, Lock01, Settings02 } from 'untitledui-js/vue'
 
 import { Avatar, AvatarFallback, AvatarImage } from '@/components/ui/avatar'
 import {
@@ -11,9 +10,6 @@ import {
   DropdownMenuItem,
   DropdownMenuLabel,
   DropdownMenuSeparator,
-  DropdownMenuSub,
-  DropdownMenuSubContent,
-  DropdownMenuSubTrigger,
   DropdownMenuTrigger,
 } from '@/components/ui/dropdown-menu'
 
@@ -29,11 +25,11 @@ const props = defineProps<{
   <DropdownMenu>
     <DropdownMenuTrigger>
       <div
-        class="flex flex-row items-center gap-2 data-[state=open]:bg-sidebar-accent data-[state=open]:text-sidebar-accent-foreground"
+        class="flex flex-row items-center gap-2 rounded-lg p-2 transition-colors hover:bg-white/10 data-[state=open]:bg-sidebar-accent data-[state=open]:text-sidebar-accent-foreground"
       >
-        <Avatar class="h-8 w-8 rounded-[10px]">
+        <Avatar class="h-8 w-8 rounded-sm">
           <AvatarImage class="bg-black" :src="props.user.avatar" :alt="props.user.name" />
-          <AvatarFallback class="rounded-[10px]"> CN </AvatarFallback>
+          <AvatarFallback class="rounded-sm"> CN </AvatarFallback>
         </Avatar>
         <div class="flex flex-1 flex-col gap-0 text-left text-sm leading-tight">
           <span class="truncate font-semibold">{{ props.user.name }}</span>
