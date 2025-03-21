@@ -7,9 +7,9 @@ import { SidebarProvider } from '@/components/ui/sidebar'
 <template>
   <div class="flex flex-col">
     <Header />
-    <SidebarProvider class="mt-14">
+    <SidebarProvider class="mt-14 flex flex-row gap-5">
       <AppSidebar />
-      <div class="w-dvw">
+      <div class="w-dvw py-4">
         <RouterView />
       </div>
     </SidebarProvider>
