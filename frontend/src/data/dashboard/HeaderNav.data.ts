@@ -62,57 +62,57 @@ export const NAV_DATA: NavData = {
   },
   navMain: [
     {
-      title: 'Overlays',
+      title: 'dashboard.sidebar.features.items.overlays.title',
       url: '#',
       icon: LayersThree01,
       isActive: false,
       items: [
         {
-          title: 'Valorant',
+          title: 'dashboard.sidebar.features.items.overlays.items.valorant',
           url: '#',
           icon: Valorant,
         },
         {
-          title: 'Faceit',
+          title: 'dashboard.sidebar.features.items.overlays.items.faceit',
           url: '#',
           icon: Faceit,
         },
         {
-          title: 'Chat',
+          title: 'dashboard.sidebar.features.items.overlays.items.chat',
           url: '#',
           icon: MessageChatCircle,
         },
         {
-          title: 'Music',
+          title: 'dashboard.sidebar.features.items.overlays.items.music',
           url: '#',
           icon: MusicNote01,
         },
       ],
     },
     {
-      title: 'Twitch Bot',
+      title: 'dashboard.sidebar.features.items.twitchBot',
       url: '#',
       icon: Twitch,
     },
     {
-      title: 'Notification Bot',
+      title: 'dashboard.sidebar.features.items.notificationBot',
       url: '#',
       icon: MessageSmileSquare,
     },
   ],
   navExtra: [
     {
-      title: 'Documentation',
+      title: 'dashboard.sidebar.extra.items.docs',
       url: '#',
       icon: BookClosed,
     },
     {
-      title: 'Integrations',
+      title: 'dashboard.sidebar.extra.items.integrations',
       url: '#',
       icon: Link03,
     },
     {
-      title: 'Help',
+      title: 'dashboard.sidebar.extra.items.help',
       url: '#',
       icon: HelpCircle,
     },

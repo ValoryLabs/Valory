@@ -8,21 +8,17 @@ import {
   SidebarMenuButton,
   SidebarMenuItem,
 } from '@/components/ui/sidebar'
-
-defineProps<{
-  title?: string
-}>()
 </script>
 
 <template>
   <SidebarGroup class="overflow-x-hidden">
-    <SidebarGroupLabel v-if="title">{{ title }}</SidebarGroupLabel>
+    <SidebarGroupLabel>{{ $t('dashboard.sidebar.start.title') }}</SidebarGroupLabel>
     <SidebarMenu>
       <SidebarMenuItem>
         <SidebarMenuButton as-child isActive>
           <a href="#">
             <component :is="Home02" />
-            <span>Introduction</span>
+            <span>{{ $t('dashboard.sidebar.start.items.intro') }}</span>
           </a>
         </SidebarMenuButton>
       </SidebarMenuItem>

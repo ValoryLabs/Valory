@@ -17,9 +17,9 @@ const data = NAV_DATA
 <template>
   <Sidebar v-bind="props">
     <SidebarContent class="text-lg">
-      <NavStart title="Get started" />
-      <NavMain title="Features" :items="data.navMain" />
-      <NavExtra title="Extra" :items="data.navExtra" :buttons="data.buttons" />
+      <NavStart />
+      <NavMain :items="data.navMain" />
+      <NavExtra :items="data.navExtra" :buttons="data.buttons" />
     </SidebarContent>
     <SidebarFooter>
       <NavFooter :user="data.user" :buttons="data.buttons" />

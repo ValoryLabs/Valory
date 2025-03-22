@@ -8,7 +8,6 @@ import {
 } from '@/components/ui/sidebar'
 
 defineProps<{
-  title?: string
   items: {
     title: string
     url: string
@@ -19,13 +18,13 @@ defineProps<{
 
 <template>
   <SidebarGroup class="overflow-x-hidden">
-    <SidebarGroupLabel v-if="title">{{ title }}</SidebarGroupLabel>
+    <SidebarGroupLabel>{{ $t('dashboard.sidebar.extra.title') }}</SidebarGroupLabel>
     <SidebarMenu>
       <SidebarMenuItem v-for="item in items" :key="item.title">
         <SidebarMenuButton :tooltip="item.title" as-child>
           <a :href="item.url">
             <component :is="item.icon" color="currentColor" v-if="item.icon" />
-            <span>{{ item.title }}</span>
+            <span>{{ $t(item.title) }}</span>
           </a>
         </SidebarMenuButton>
       </SidebarMenuItem>

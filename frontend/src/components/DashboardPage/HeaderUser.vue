@@ -33,7 +33,7 @@ const props = defineProps<{
         </Avatar>
         <div class="flex flex-1 flex-col gap-0 text-left text-sm leading-tight">
           <span class="truncate font-semibold">{{ props.user.name }}</span>
-          <span class="truncate text-xs">Logged as</span>
+          <span class="truncate text-xs">{{ $t('dashboard.header.user.logged') }}</span>
         </div>
         <ChevronsUpDown class="ml-auto size-4" />
       </div>
@@ -58,24 +58,23 @@ const props = defineProps<{
       <DropdownMenuGroup>
         <DropdownMenuItem>
           <Settings02 />
-          Settings
+          {{ $t('dashboard.header.user.menu.settings') }}
         </DropdownMenuItem>
       </DropdownMenuGroup>
-      <DropdownMenuSeparator />
       <DropdownMenuGroup>
         <DropdownMenuItem>
           <Lock01 />
-          Privacy Policy
+          {{ $t('dashboard.header.user.menu.privacy') }}
         </DropdownMenuItem>
         <DropdownMenuItem>
           <File05 />
-          Terms of Service
+          {{ $t('dashboard.header.user.menu.terms') }}
         </DropdownMenuItem>
       </DropdownMenuGroup>
       <DropdownMenuSeparator />
       <DropdownMenuItem>
         <LogOut />
-        Log out
+        {{ $t('dashboard.header.user.menu.logout') }}
       </DropdownMenuItem>
     </DropdownMenuContent>
   </DropdownMenu>

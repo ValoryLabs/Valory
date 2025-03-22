@@ -88,5 +88,50 @@
     },
     "copyright": "All rights reserved.",
     "love": "Made with ❤\uFE0F on \uD83C\uDF0E Earth"
+  },
+  "dashboard": {
+    "sidebar": {
+      "start": {
+        "title": "Get Started",
+        "items": {
+          "intro": "Introduction"
+        }
+      },
+      "features": {
+        "title": "Features",
+        "items": {
+          "overlays": {
+            "title": "Overlays",
+            "items": {
+              "valorant": "Valorant",
+              "faceit": "Faceit",
+              "chat": "Chat",
+              "music": "Music"
+            }
+          },
+          "twitchBot": "Twitch Bot",
+          "notificationBot": "Notification Bot"
+        }
+      },
+      "extra": {
+        "title": "Extra",
+        "items": {
+          "docs": "Documentation",
+          "integrations": "Integrations",
+          "help": "Help"
+        }
+      }
+    },
+    "header": {
+      "user": {
+        "logged": "Logged as",
+        "menu": {
+          "settings": "Settings",
+          "privacy": "Privacy Policy",
+          "terms": "Terms of Service",
+          "logout": "Logout"
+        }
+      }
+    }
   }
 }

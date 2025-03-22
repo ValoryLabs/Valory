@@ -14,7 +14,6 @@ import {
 } from '@/components/ui/sidebar'
 
 defineProps<{
-  title?: string
   items: {
     title: string
     url: string
@@ -30,7 +29,7 @@ defineProps<{
 
 <template>
   <SidebarGroup>
-    <SidebarGroupLabel v-if="title">{{ title }}</SidebarGroupLabel>
+    <SidebarGroupLabel>{{ $t('dashboard.sidebar.features.title') }}</SidebarGroupLabel>
     <SidebarMenu>
       <Collapsible
         v-for="item in items"
@@ -43,7 +42,7 @@ defineProps<{
           <CollapsibleTrigger as-child>
             <SidebarMenuButton :tooltip="item.title">
               <component :is="item.icon" color="currentColor" v-if="item.icon" />
-              <span>{{ item.title }}</span>
+              <span>{{ $t(item.title) }}</span>
               <ChevronRight
                 class="ml-auto transition-transform duration-200 group-data-[state=open]/collapsible:rotate-90"
               />
@@ -55,7 +54,7 @@ defineProps<{
                 <SidebarMenuSubButton as-child>
                   <a :href="subItem.url">
                     <component :is="subItem.icon" color="currentColor" v-if="subItem.icon" />
-                    <span>{{ subItem.title }}</span>
+                    <span>{{ $t(subItem.title) }}</span>
                   </a>
                 </SidebarMenuSubButton>
               </SidebarMenuSubItem>
@@ -66,7 +65,7 @@ defineProps<{
           <SidebarMenuButton :tooltip="item.title" as-child>
             <a :href="item.url">
               <component :is="item.icon" color="currentColor" v-if="item.icon" />
-              <span>{{ item.title }}</span>
+              <span>{{ $t(item.title) }}</span>
             </a>
           </SidebarMenuButton>
         </SidebarMenuItem>

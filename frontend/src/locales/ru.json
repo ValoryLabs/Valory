@@ -88,5 +88,50 @@
     },
     "copyright": "Все права защищены.",
     "love": "Сделано с ❤\uFE0F на \uD83C\uDF0E Земле"
+  },
+  "dashboard": {
+    "sidebar": {
+      "start": {
+        "title": "Начать",
+        "items": {
+          "intro": "Введение"
+        }
+      },
+      "features": {
+        "title": "Особенности",
+        "items": {
+          "overlays": {
+            "title": "Оверлеи",
+            "items": {
+              "valorant": "Valorant",
+              "faceit": "Faceit",
+              "chat": "Чат",
+              "music": "Музыка"
+            }
+          },
+          "twitchBot": "Twitch Бот",
+          "notificationBot": "Бот уведомлений"
+        }
+      },
+      "extra": {
+        "title": "Дополнительно",
+        "items": {
+          "docs": "Документация",
+          "integrations": "Интеграции",
+          "help": "Помощь"
+        }
+      }
+    },
+    "header": {
+      "user": {
+        "logged": "Вошли как",
+        "menu": {
+          "settings": "Настройки",
+          "privacy": "Политика конфиденциальности",
+          "terms": "Условия предоставления услуг",
+          "logout": "Выйти"
+        }
+      }
+    }
   }
 }
