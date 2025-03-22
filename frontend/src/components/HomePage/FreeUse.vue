@@ -1,5 +1,6 @@
 <script lang="ts" setup>
 import InteractiveHoverButton from '@/components/ui/InteractiveHoverButton.vue'
+import Noise from '@/components/ui/Noise.vue'
 import router from '@/router'
 </script>
 
@@ -18,9 +19,9 @@ import router from '@/router'
         size="lg"
         class="w-[11rem] text-base"
       />
-      <div
-        class="bg-gradient absolute -top-96 left-0 right-0 -z-10 rounded-full p-52 blur-[100px]"
-      ></div>
+      <div class="bg-gradient absolute -top-96 left-0 right-0 -z-10 rounded-full p-52 blur-[100px]">
+        <Noise />
+      </div>
     </div>
     <div
       class="bg-white/2 absolute -bottom-6 w-[80%] rounded-2xl border border-white/10 px-12 py-5 backdrop-blur-[8px]"

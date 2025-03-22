@@ -1,13 +1,14 @@
 <script setup lang="ts">
 import ContainerScroll from '@/components/ui/ContainerScroll/ContainerScroll.vue'
+import Noise from '@/components/ui/Noise.vue'
 import { Tabs, TabsContent, TabsList, TabsTrigger } from '@/components/ui/tabs'
 import { PREVIEW_TABS_DATA } from '@/data/PreviewTabs.data'
 </script>
 
 <template>
-  <section>
+  <section class="relative">
     <Tabs default-value="home">
-      <div class="mb-16 flex flex-col">
+      <div class="mb-16 mt-16 flex flex-col">
         <ContainerScroll>
           <template #title>
             <TabsList
@@ -42,5 +43,6 @@ import { PREVIEW_TABS_DATA } from '@/data/PreviewTabs.data'
         </ContainerScroll>
       </div>
     </Tabs>
+    <Noise />
   </section>
 </template>

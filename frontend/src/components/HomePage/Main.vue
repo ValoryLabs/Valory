@@ -2,6 +2,7 @@
 import { Stars02 } from 'untitledui-js/vue'
 
 import Discord from '@/components/icons/Socials/Discord.vue'
+import Noise from '@/components/ui/Noise.vue'
 import ParticlesBg from '@/components/ui/ParticlesBg.vue'
 import Sparkles from '@/components/ui/Sparkles.vue'
 import { Button } from '@/components/ui/button'
@@ -87,6 +88,7 @@ const triggerConfetti = () => {
       :staticity="10"
       refresh
     />
+    <Noise />
   </section>
 </template>
 

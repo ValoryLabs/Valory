@@ -17,8 +17,10 @@ const FreeUse = defineAsyncComponent(() => import('@/components/HomePage/FreeUse
   <Header />
   <div class="m-auto">
     <div class="flex flex-col gap-16">
-      <Main />
-      <Preview />
+      <div class="flex flex-col">
+        <Main />
+        <Preview />
+      </div>
       <Features />
       <Streamers v-if="!hidden" />
       <OpenSource />
