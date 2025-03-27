@@ -175,4 +175,11 @@ export const STREAMERS_DATA: StreamersData[] = [
     live: true,
     verified: false,
   },
+  {
+    username: 'ka1davl',
+    followers: '1.9k',
+    img: 'https://static-cdn.jtvnw.net/jtv_user_pictures/d1e0ebf8-2a2a-4110-8a6a-114eb3505ad1-profile_image-70x70.png',
+    live: true,
+    verified: false,
+  },
 ]
